@@ -20,7 +20,7 @@ def handler(sig, frame):
             # kill process
             os.kill(int(pid), signal.SIGINT)  # SIGINT is the signal for "Interrupt"
 
-    exit(0)
+        exit(0)
 
 while 1:
     signal.signal(signal.SIGUSR1, handler)
