@@ -128,6 +128,7 @@ def process_time_by_CPU(data, log_num):
 def check_diffs(data, log_num, min_diff):
     max_difference = 0
     with open("Results/time_diffs_" + log_num + ".txt", "w") as f:
+        f.write("Max difference: " + str(max_difference) + "\n")
         for cpu_num in range(len(data)):
             f.write(f"CPU {cpu_num} total difference: {(data[cpu_num][-1][2] - data[cpu_num][0][2]) / 1e+9}\n")
             prev_ts = 0
@@ -153,7 +154,6 @@ def check_diffs(data, log_num, min_diff):
                 # update the prev timestamp
                 prev_ts = ts
                 prev_data = [pname, pid, ts]
-        f.write("Max difference: " + str(max_difference) + "\n")
 
 
 def process_time_by_pid(data, log_num):
