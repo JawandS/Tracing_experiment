@@ -7,6 +7,7 @@ counter = 0
 def caught_sig():
     global counter
     counter += 1
+    print("Caught signal", counter)
     if counter >= THREADS:
         name = "bpftrace"
         for line in os.popen("ps ax | grep " + name + " | grep -v grep"):
