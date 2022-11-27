@@ -4,10 +4,11 @@ THREADS = 9
 counter = 0
 
 
-def caught_sig():
+def handler(sig, frame):
     global counter
     counter += 1
     print("Caught signal", counter)
+
     if counter >= THREADS:
         name = "bpftrace"
         for line in os.popen("ps ax | grep " + name + " | grep -v grep"):
@@ -21,4 +22,4 @@ def caught_sig():
 
 
 while 1:
-    signal.signal(signal.SIGUSR1, caught_sig)
+    signal.signal(signal.SIGUSR1, handler)
