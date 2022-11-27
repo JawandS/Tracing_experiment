@@ -1,6 +1,6 @@
 import os, signal
 
-THREADS = 8
+THREADS = 7
 counter = 0
 
 
