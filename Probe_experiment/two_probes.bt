@@ -1,0 +1,7 @@
+tracepoint:sched:sched_switch {
+    printf("%s %lu %d %lu\n", comm, pid, cpu, nsecs);
+}
+
+tracepoint:syscalls:sys_enter_nanosleep {
+    printf("%s is sleeping.\n", comm);
+}
