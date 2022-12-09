@@ -1,4 +1,4 @@
-import time, sys, os, signal
+import time, os, signal
 
 # fibonacci function using recursion
 def fib(n):
