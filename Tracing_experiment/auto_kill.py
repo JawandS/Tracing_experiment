@@ -1,13 +1,9 @@
-import os, signal
-
-THREADS = 4
-counter = 0
-
+import os, sys, signal
 
 def handler(sig, frame):
     global counter
     counter += 1
-    print("Caught signal", counter)
+    # print("Caught signal", counter)
 
     if counter >= THREADS:
         name = "bpftrace"
@@ -22,5 +18,8 @@ def handler(sig, frame):
         # end auto kill
         exit(0)
 
-while 1:
-    signal.signal(signal.SIGUSR1, handler)
+if __name__ == "__main__":
+    THREADS = int(sys.argv[1])
+    counter = 0
+    while 1:
+        signal.signal(signal.SIGUSR1, handler)
