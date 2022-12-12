@@ -1,4 +1,4 @@
-import time, os, signal
+import time, sys, os, signal
 
 # fibonacci function using recursion
 def fib(n):
@@ -8,8 +8,9 @@ def fib(n):
 
 # Driver Program
 if __name__ == "__main__":
+    args = sys.argv[1:]
     start_time = time.time()
-    n = 35
+    n = int(args[1]) # depth of fib job
     fib(n)
 
     # signal auto kill
@@ -20,3 +21,4 @@ if __name__ == "__main__":
         pid = fields[0]
         # kill process
         os.kill(int(pid), signal.SIGUSR1)  # send user signal
+    print(f"job {args[0]}, depth {n}, {round(time.time() - start_time, 3)}s")
