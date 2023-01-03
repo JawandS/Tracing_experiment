@@ -1,3 +1,4 @@
 #!/bin/bash
 counter=0
-sudo when-changed tracking.txt tracking.txt counter=$counter+1; cat $counter &
+sudo when-changed tracking.txt 'echo $counter && counter=$((counter+1)) && echo $counter';
+echo $counter
