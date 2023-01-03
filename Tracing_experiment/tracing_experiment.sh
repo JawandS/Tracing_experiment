@@ -6,14 +6,15 @@ do
   sudo bpftrace context_switch_probe.bt >> raw.txt & sudo python3 auto_kill.py &
   for a_var in {1...20}
   do
-    python3 job.py a_var 25 &
+    python3 job.py $a_var 25 &
     sleep 0.015
   done
-  echo date +"%T.%N" >> Logs/four_fib_"$1".txt # end tracing, start non tracing
+  echo date +"%T.%N" >> Logs/log_"$1".txt # end tracing, start non tracing
   # second job - without tracing
   for b_var in {1...20}
   do
-    python3 job.py b_var 25 &
+    python3 job.py $b_var 25 &
+    sleep 0.015
   done
   echo date +"%T.%N" >> Logs/four_fib_"$1".txt # end non tracing
 done

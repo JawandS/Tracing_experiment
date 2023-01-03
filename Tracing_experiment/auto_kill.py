@@ -18,8 +18,6 @@ def handler(sig, frame):
             os.kill(int(pid), signal.SIGINT)  # SIGINT is the signal for "Interrupt"
         # end auto kill
         exit(0)
-    else:
-        print("job", counter, "/", THREADS, "done")
 
 
 if __name__ == "__main__":
