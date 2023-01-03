@@ -4,7 +4,7 @@ def read_file(file):
     with open(file, 'r') as f:
         for line in f:
             if ln := line.strip():
-                lines.append(round(float(ln), 3))
+                lines.append(float(ln), 3)
     return lines
 
 
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     else:
         run = '1'
     # read file
-    lines = read_file("Logs/run" + run + ".txt")
+    lines = read_file("Logs/log_" + run + ".txt")
     # process data
     tracing_info, model_info, difference_info = get_data(lines)
     # write results to file
