@@ -3,19 +3,19 @@ for run_num in {1..20}
 do
   echo time +%N >> Logs/four_fib_"$1".txt
   # first job - with tracing
-  for a_var in 1 2 3 4
+  sudo bpftrace context_switch_probe.bt >> raw.txt & sudo python3 auto_kill.py &
+  for a_var in {1...20}
   do
-    python3 job.py tracing &
+    python3 job.py a_var 25 &
+    sleep 0.015
   done
-  sudo python3 auto_kill.py & sudo bpftrace context_switch_probe.bt >> raw.txt
   echo time +%N >> Logs/four_fib_"$1".txt
   # second job - without tracing
-  for b_var in 1 2 3 4
+  for b_var in {1...20}
   do
-    python3 job.py tracing &
+    python3 job.py b_var 25 &
   done
-  sudo python3 auto_kill.py && echo time +%N >> Logs/four_fib_"$1".txt
-  echo "$run_num"
+  echo time +%N >> Logs/four_fib_"$1".txt
 done
 sudo python3 processing.py "$1"
 find . -size +98M | cat >> .gitignore

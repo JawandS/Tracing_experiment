@@ -1,5 +1,6 @@
 import os, sys, signal
 
+
 def handler(sig, frame):
     global counter
     counter += 1
@@ -17,9 +18,12 @@ def handler(sig, frame):
             os.kill(int(pid), signal.SIGINT)  # SIGINT is the signal for "Interrupt"
         # end auto kill
         exit(0)
+    else:
+        print("job", counter, "/", THREADS, "done")
+
 
 if __name__ == "__main__":
-    THREADS = int(sys.argv[1])
+    THREADS = int(sys.argv[1])  # number of threads
     counter = 0
     while 1:
         signal.signal(signal.SIGUSR1, handler)
