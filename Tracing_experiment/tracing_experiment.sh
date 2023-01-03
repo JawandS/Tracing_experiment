@@ -4,7 +4,7 @@ do
   echo date +"%T.%N" >> Logs/log_"$1".txt # starting time for tracing set
   counter=0
   # first set - with tracing
-  sudo bpftrace context_switch_probe.bt >> raw.txt & sudo when-changed tracking.txt counter=$counter+1; car $counter &
+  sudo bpftrace context_switch_probe.bt >> raw.txt & sudo when-changed tracking.txt counter=$counter+1; cat $counter &
   for a_var in {1...20}
   do
     python3 job.py $a_var 25 >> tracking.txt &
