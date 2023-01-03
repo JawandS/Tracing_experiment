@@ -1,0 +1,9 @@
+date +%T.%N
+date +%T.%N
+date +%T.%N
+date +%T.%N
+date +%T.%N
+date +%T.%N
+date +%T.%N
+date +%T.%N
+date +%T.%N

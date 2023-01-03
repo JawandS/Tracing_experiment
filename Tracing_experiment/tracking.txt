@@ -19,3 +19,6 @@ test
 test
 test
 test
+job {1...20}, depth 25, 0.021s
+job {1...20}, depth 25, 0.034s
+job {1...20}, depth 25, 0.033s
