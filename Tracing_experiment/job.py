@@ -23,4 +23,5 @@ if __name__ == "__main__":
         pid = fields[0]
         # kill process
         os.kill(int(pid), signal.SIGUSR1)  # send user signal
-    print(f"job {args[0]}, depth {n}, {round(time.time() - start_time, 3)}s")
+    # print(f"job {args[0]}, depth {n}, {round(time.time() - start_time, 3)}s")
+    print("job complete")
