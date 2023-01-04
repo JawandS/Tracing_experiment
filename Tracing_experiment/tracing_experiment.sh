@@ -4,7 +4,7 @@ do
   echo date +"%T.%N" >> Logs/log_"$1".txt # starting time for tracing set
   counter=0
   # first set - with tracing
-  sudo bpftrace context_switch_probe.bt >> raw.txt & while inotifywait -e modify tracking.txt; do ((counter=counter+1)) && echo "$counter" && if [ "$counter" -ge 20 ]; then kill "$(ps aux | grep '[b]pftrace' | awk '{print $2}')" && echo "killing jobs"; fi; done &
+  sudo bpftrace context_switch_probe.bt >> raw.txt & while inotifywait -e -m modify tracking.txt; do ((counter=counter+1)) && echo "$counter" && if [ "$counter" -ge 20 ]; then kill "$(ps aux | grep '[b]pftrace' | awk '{print $2}')" && echo "killing jobs"; fi; done &
   for a_var in {1...20}
   do
     python3 job.py "$a_var" 25 >> tracking.txt & sleep 0.015
