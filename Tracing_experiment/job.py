@@ -13,15 +13,5 @@ if __name__ == "__main__":
     args = sys.argv[1:]  # job number and depth
     start_time = time.time()
     n = int(args[1])  # depth of fib job
-    fib(n)
-
-    # signal auto kill
-    name = "auto_kill.py"
-    for line in os.popen("ps ax | grep " + name + " | grep -v grep"):
-        fields = line.split()
-        # extracting Process ID from the output
-        pid = fields[0]
-        # kill process
-        os.kill(int(pid), signal.SIGUSR1)  # send user signal
-    # print(f"job {args[0]}, depth {n}, {round(time.time() - start_time, 3)}s")
-    print("job complete")
+    fib(n) # run fib job
+    print(f"job {args[0]}, depth {n}, {round(time.time() - start_time, 3)}s") # output job info
