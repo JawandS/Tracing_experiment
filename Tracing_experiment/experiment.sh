@@ -1,11 +1,11 @@
 #!/bin/bash
 truncate -s 0 file.txt; killall python3; killall bpftrace # clear output file and kill processes
-for _ in {1..10} # number of iterations
+for _ in {1...20} # number of iterations
 do
   # first set - with tracing
   tracing_counter=0 # number of fib jobs completed
   sudo bpftrace context_switch_probe.bt >> raw.txt & # being tracing
-  end=$((SECONDS+10)) # 10 seconds
+  end=$((SECONDS+30)) # 10 seconds
   while [ $SECONDS -lt $end ]; do # continue for 10 seconds
       python3 job.py $tracing_counter 10 27 >> /dev/null &&
       tracing_counter=$((tracing_counter+1)) # run job and increment counter
@@ -15,7 +15,7 @@ do
   killall bpftrace && echo "kill bpftrace" # end tracing
   # second set - without tracing
   simple_counter=0 # number of fib jobs completed
-  end=$((SECONDS+10)) # 10 seconds
+  end=$((SECONDS+30)) # 10 seconds
   while [ $SECONDS -lt $end ]; do # continue for 10 seconds
       python3 job.py $simple_counter 10 27 >> /dev/null &&
       simple_counter=$((simple_counter+1)) # run job and increment counter

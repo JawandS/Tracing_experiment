@@ -1,46 +1,48 @@
+import sys
+
+
 def read_file(file):
     # add file lines to list
     lines = []
     with open(file, 'r') as f:
         for line in f:
-            if ln := line.strip():
-                lines.append(float(ln), 3)
+            if ln := int(line.strip()):
+                lines.append(ln)
     return lines
 
 
 def get_data(lines):
     # split into tracing and not tracing runs
-    tracing_runs = []
-    model_runs = []
+    tracing_run = []
+    standard_run = []
     for counter, line in enumerate(lines):
         if counter % 2 == 0:
-            tracing_runs.append(line)
+            tracing_run.append(line)
         else:
-            model_runs.append(line)
+            standard_run.append(line)
     # process average min and max
-    tracing_info = (round(sum(tracing_runs) / len(tracing_runs), 5), min(tracing_runs), max(tracing_runs))
-    model_info = (round(sum(model_runs) / len(model_runs), 5), min(model_runs), max(model_runs))
-    difference_info = (round(tracing_info[0] - model_info[0], 5), round(tracing_info[1] - model_info[1], 5),
-                       round(tracing_info[2] - model_info[2], 5))
-    return tracing_info, model_info, difference_info
+    tracing_info = (round(sum(tracing_run) / len(tracing_run), 3), min(tracing_run), max(tracing_run))
+    standard_info = (round(sum(standard_run) / len(standard_run), 3), min(standard_run), max(standard_run))
+    difference_info = [standard_run[i] - tracing_run[i] for i in range(len(tracing_run))]
+    total_difference = round(sum(standard_run) / sum(tracing_run), 3)
+    return tracing_info, standard_info, difference_info, total_difference
 
 
 if __name__ == "__main__":
     # get the run number
-    import sys
-
     args = sys.argv
     if len(args) > 1:
         run = args[1]
     else:
-        run = '1'
+        run = '3'
     # read file
     lines = read_file("Logs/log_" + run + ".txt")
     # process data
-    tracing_info, model_info, difference_info = get_data(lines)
+    tracing_info, standard_info, diff_runs, total_difference = get_data(lines)
     # write results to file
-    with open("Results/result" + run + ".txt", 'w') as f:
-        f.write("average, min, max\n")
-        f.write("Tracing: " + str(tracing_info) + "\n")
-        f.write("Model: " + str(model_info) + "\n")
-        f.write("Model: " + str(difference_info) + "\n")
+    with open("Results/result_" + run + ".txt", 'w') as f:
+        f.write("              average, min, max\n")
+        f.write("Tracing runs: " + str(tracing_info) + "\n")
+        f.write("Normal runs : " + str(standard_info) + "\n")
+        f.write("Differences: " + str(diff_runs) + "\n")
+        f.write("Total diff: " + str(total_difference) + "\n")

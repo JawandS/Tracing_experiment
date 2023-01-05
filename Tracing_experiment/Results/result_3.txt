@@ -1,0 +1,5 @@
+              average, min, max
+Tracing runs: (825.0, 807, 836)
+Normal runs : (887.8, 885, 890)
+Differences: [80, 50, 53, 60, 62, 62, 65, 76, 61, 59]
+Total diff: 1.076
