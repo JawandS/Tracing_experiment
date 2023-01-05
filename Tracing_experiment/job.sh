@@ -1,4 +1,4 @@
-for counter in {1...5} # numer of fib jobs
+for ((i = 1; i <= 5; i++)) # numer of fib jobs
 do
-  python3 job.py "$counter" 30 & sleep 0.015
+  python3 job.py $i 30 & sleep 0.015
 done
