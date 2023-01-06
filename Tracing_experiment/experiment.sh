@@ -1,6 +1,6 @@
 #!/bin/bash
 truncate -s 0 file.txt; killall python3; killall bpftrace # clear output file and kill processes
-for _ in {1...20} # number of iterations
+for _ in {1..20} # number of iterations
 do
   # first set - with tracing
   tracing_counter=0 # number of fib jobs completed
@@ -23,4 +23,5 @@ do
   # killall python3 && echo "kill python"
   echo $simple_counter >> Logs/log_"$1".txt && echo "standard produced $simple_counter" # output to log
 done
+python3 processing.py $1
 git add .; git commit -m "add and process overhead experiment $1"; git push # add to git
