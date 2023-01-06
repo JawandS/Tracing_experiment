@@ -1,3 +1,4 @@
+10 iterations, 10 seconds, 1 thread, 27 depth
               average, min, max
 Tracing runs: (825.0, 807, 836)
 Normal runs : (887.8, 885, 890)

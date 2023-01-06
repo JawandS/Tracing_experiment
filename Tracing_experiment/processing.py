@@ -41,6 +41,7 @@ if __name__ == "__main__":
     tracing_info, standard_info, diff_runs, total_difference = get_data(lines)
     # write results to file
     with open("Results/result_" + run + ".txt", 'w') as f:
+        f.write(f"iterations {args[2]} time {args[3]} threads {args[4]} depth {args[5]}")
         f.write("              average, min, max\n")
         f.write("Tracing runs: " + str(tracing_info) + "\n")
         f.write("Normal runs : " + str(standard_info) + "\n")
