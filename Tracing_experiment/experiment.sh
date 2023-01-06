@@ -1,5 +1,5 @@
 #!/bin/bash
-truncate -s 0 file.txt; killall python3; killall bpftrace # clear output file and kill processes
+truncate -s 0 raw.txt; killall python3; killall bpftrace # clear output file and kill processes
 for _ in {1..20} # number of iterations
 do
   # first set - with two probes tracing

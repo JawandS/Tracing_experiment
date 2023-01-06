@@ -39,7 +39,8 @@ if __name__ == "__main__":
     if len(args) > 1:
         run = args[1]
     else:
-        run = '7'
+        run = '8'
+        args = ["", run, 20, "30s", 15, 27]
     # read file
     lines = read_file("Logs/log_" + run + ".txt")
     # process data
