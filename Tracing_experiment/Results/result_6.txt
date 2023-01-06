@@ -1,0 +1,5 @@
+iterations 15 time 20s threads 15 depth 30              average, min, max
+Tracing runs: (1689.8, 1638, 1703)
+Normal runs : (1736.133, 1731, 1741)
+Differences: [98, 44, 36, 43, 56, 42, 41, 49, 40, 28, 37, 42, 46, 56, 37]
+Total diff: 1.027
