@@ -7,7 +7,7 @@ def read_file(file):
     with open(file, 'r') as f:
         for line in f:
             if ln := int(line.strip()):
-                lines.append(ln)
+                lines.append(float(ln))
     return lines
 
 
@@ -16,7 +16,7 @@ def get_data(lines):
     two_run = []
     tracing_run = []
     standard_run = []
-    for counter in range(len(lines), 3):
+    for counter in range(0, len(lines), 3):
         two_run.append(lines[counter])
         tracing_run.append(lines[counter + 1])
         standard_run.append(lines[counter + 2])
@@ -29,7 +29,7 @@ def get_data(lines):
     def calc_diff(runA, runB):
         round(sum(runA) / sum(runB), 3)
 
-    total_difference = [calc_diff(two_run, standard_run), calc_diff(tracing_run, standard_run), calc_diff(tracing_run, two_run)]
+    total_difference = [round(sum(standard_run) / sum(two_run), 3), round(sum(standard_run) / sum(tracing_run), 3), round(sum(tracing_run) / sum(two_run), 3)]
     return two_info, tracing_info, standard_info, difference_info, total_difference
 
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     if len(args) > 1:
         run = args[1]
     else:
-        run = '3'
+        run = '7'
     # read file
     lines = read_file("Logs/log_" + run + ".txt")
     # process data
@@ -48,9 +48,9 @@ if __name__ == "__main__":
     with open("Results/result_" + run + ".txt", 'w') as f:
         f.write(f"iterations {args[2]} time {args[3]} threads {args[4]} depth {args[5]}\n")
         f.write("              average, min, max\n")
-        f.write("Two probes  : " + str(tracing_info) + "\n")
+        f.write("Two probes  : " + str(two_info) + "\n")
         f.write("Tracing runs: " + str(tracing_info) + "\n")
         f.write("Normal runs : " + str(standard_info) + "\n")
         f.write("Two tracing standard: " + str(diff_runs) + "\n")
-        f.write("Two vs standard | tracing vs standard | tracing vs two\n")
+        f.write("standard / two | standard / tracing | tracing / two\n")
         f.write("Total diffs: " + str(total_difference) + "\n")
