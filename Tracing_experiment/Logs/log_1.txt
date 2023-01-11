@@ -1,0 +1,100 @@
+1648
+1688
+1726
+wc -l rawTwo.txt
+wc -l raw.txt
+1701
+1694
+1724
+wc -l rawTwo.txt
+wc -l raw.txt
+1702
+1699
+1720
+wc -l rawTwo.txt
+wc -l raw.txt
+1701
+1695
+1729
+wc -l rawTwo.txt
+wc -l raw.txt
+1697
+1688
+1728
+wc -l rawTwo.txt
+wc -l raw.txt
+1705
+1689
+1726
+wc -l rawTwo.txt
+wc -l raw.txt
+1708
+1691
+1728
+wc -l rawTwo.txt
+wc -l raw.txt
+1705
+1690
+1725
+wc -l rawTwo.txt
+wc -l raw.txt
+1707
+1686
+1734
+wc -l rawTwo.txt
+wc -l raw.txt
+1704
+1672
+1724
+wc -l rawTwo.txt
+wc -l raw.txt
+1699
+1690
+1722
+wc -l rawTwo.txt
+wc -l raw.txt
+1703
+1695
+1722
+wc -l rawTwo.txt
+wc -l raw.txt
+1699
+1675
+1724
+wc -l rawTwo.txt
+wc -l raw.txt
+1701
+1689
+1723
+wc -l rawTwo.txt
+wc -l raw.txt
+1704
+1692
+1729
+wc -l rawTwo.txt
+wc -l raw.txt
+1699
+1695
+1727
+wc -l rawTwo.txt
+wc -l raw.txt
+1703
+1697
+1714
+wc -l rawTwo.txt
+wc -l raw.txt
+1700
+1699
+1725
+wc -l rawTwo.txt
+wc -l raw.txt
+1695
+1686
+1720
+wc -l rawTwo.txt
+wc -l raw.txt
+1697
+1693
+1729
+wc -l rawTwo.txt
+wc -l raw.txt
