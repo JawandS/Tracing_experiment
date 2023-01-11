@@ -6,8 +6,11 @@ def read_file(file):
     lines = []
     with open(file, 'r') as f:
         for line in f:
-            if ln := int(line.strip()):
-                lines.append(float(ln))
+            if line != '\n' and line != "":
+                if ".txt" in line:
+                    lines.append(float(line.split(" ")[0]))
+                else:
+                    lines.append(float(line))
     return lines
 
 
@@ -16,8 +19,8 @@ def get_data(lines):
     two_run = []
     tracing_run = []
     standard_run = []
-    two_lines = [] # number of tracing events
-    tracing_lines = [] # number of context switches
+    two_lines = []  # number of tracing events
+    tracing_lines = []  # number of context switches
     for counter in range(0, len(lines), 5):
         two_run.append(lines[counter])
         tracing_run.append(lines[counter + 1])
@@ -28,9 +31,10 @@ def get_data(lines):
     two_info = (round(sum(two_run) / len(two_run), 3), min(two_run), max(two_run))
     tracing_info = (round(sum(tracing_run) / len(tracing_run), 3), min(tracing_run), max(tracing_run))
     standard_info = (round(sum(standard_run) / len(standard_run), 3), min(standard_run), max(standard_run))
-    difference_info = (two_run, tracing_run, standard_run, sum(two_lines) / sum(two_run), sum(tracing_lines) / sum(tracing_run))
+    difference_info = (two_run, tracing_run, standard_run)
     # calculate differences
-    total_difference = [round(sum(standard_run) / sum(two_run), 3), round(sum(standard_run) / sum(tracing_run), 3), round(sum(tracing_run) / sum(two_run), 3)]
+    total_difference = [round(sum(standard_run) / sum(two_run), 3), round(sum(standard_run) / sum(tracing_run), 3),
+                        round(sum(tracing_run) / sum(two_run), 3), (sum(two_lines) / sum(two_run)) / (sum(tracing_lines) / sum(tracing_run))]
     return two_info, tracing_info, standard_info, difference_info, total_difference
 
 
@@ -40,7 +44,7 @@ if __name__ == "__main__":
     if len(args) > 1:
         run = args[1]
     else:
-        run = '8'
+        run = '1'
         args = ["", run, 20, "30s", 15, 27]
     # read file
     lines = read_file("Logs/log_" + run + ".txt")
@@ -54,5 +58,5 @@ if __name__ == "__main__":
         f.write("Tracing runs: " + str(tracing_info) + "\n")
         f.write("Normal runs : " + str(standard_info) + "\n")
         f.write("Two tracing standard: " + str(diff_runs) + "\n")
-        f.write("standard / two | standard / tracing | tracing / two | events / runs | cs / runs\n")
+        f.write("standard / two | standard / tracing | tracing / two | tracing events / two events\n")
         f.write("Total diffs: " + str(total_difference) + "\n")

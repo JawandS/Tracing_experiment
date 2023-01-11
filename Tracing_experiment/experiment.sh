@@ -1,8 +1,8 @@
 #!/bin/bash
-runNumber=1
+runNumber=0
 # run experiment
 for _ in {1..20}; do # number of iterations
-  printf "$'\t'---------"$'\t'""
+  runNumber=$((runNumber + 1)) && printf "\t---------Run %s---------\n" "$runNumber"
   # clear output file and kill processes
   truncate -s 0 raw.txt
   truncate -s 0 rawTwo.txt
@@ -44,7 +44,7 @@ for _ in {1..20}; do # number of iterations
   echo $simple_counter >>Logs/log_"$1".txt && echo "Standard: $simple_counter" # output to log
   wc -l rawTwo.txt >>Logs/log_"$1".txt
   wc -l raw.txt >>Logs/log_"$1".txt
-  echo "Run $runNumber Complete" && runNumber=$((runNumber + 1))
+  echo ""
 done
 #echo "info: run number, iterations, time, threads, depth" >>Logs/log_"$1".txt
 #echo "      $1          20          30s   15       27" >>Logs/log_"$1".txt
