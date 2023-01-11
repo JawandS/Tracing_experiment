@@ -1,11 +1,11 @@
 #!/bin/bash
-truncate -s 0 raw.txt; killall python3; killall bpftrace # clear output file and kill processes
+truncate -s 0 raw.txt; truncate -s 0 rawTwo.txt; killall python3; killall bpftrace # clear output file and kill processes
 for _ in {1..20} # number of iterations
 do
   # first set - with two probes tracing
   sleep 1 # wait for 1 second
   two_counter=0 # number of fib jobs completed
-  sudo bpftrace two_probes.bt >> raw.txt & # being tracing
+  sudo bpftrace two_probes.bt >> rawTwo.txt & # being tracing
   end=$((SECONDS+30)) # 10 seconds
   while [ $SECONDS -lt $end ]; do # continue for 10 seconds
       python3 job.py two_counter 15 27 >> /dev/null &&
