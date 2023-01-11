@@ -1,9 +1,11 @@
 #!/bin/bash
-runNumber=0
+iterationCounter=0
 increment=20
+threads=15
+depth=27
 # run experiment
 for _ in {1..20}; do # number of iterations
-  runNumber=$((runNumber + 1)) && printf "\t---------Run %s---------\n" "$runNumber"
+  iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
   # clear output file and kill processes
   truncate -s 0 raw.txt
   truncate -s 0 rawTwo.txt
@@ -16,7 +18,7 @@ for _ in {1..20}; do # number of iterations
   sudo bpftrace two_probes.bt >>rawTwo.txt & # being tracing
   end=$((SECONDS + increment))                      # 10 seconds
   while [ $SECONDS -lt $end ]; do            # continue for 10 seconds
-    python3 job.py two_counter 15 27 >>/dev/null &&
+    python3 job.py two_counter $threads $depth >>/dev/null &&
       two_counter=$((two_counter + 1)) # run job and increment counter
   done
   echo $two_counter >>Logs/log_"$1".txt && echo "Two probes: $two_counter" # output to log
@@ -28,7 +30,7 @@ for _ in {1..20}; do # number of iterations
   sudo bpftrace context_switch_probe.bt >>raw.txt & # begin tracing
   end=$((SECONDS + increment))                             # 10 seconds
   while [ $SECONDS -lt $end ]; do                   # continue for 10 seconds
-    python3 job.py $tracing_counter 15 27 >>/dev/null &&
+    python3 job.py $tracing_counter $threads $depth >>/dev/null &&
       tracing_counter=$((tracing_counter + 1)) # run job and increment counter
   done
   echo $tracing_counter >>Logs/log_"$1".txt && echo "Tracing: $tracing_counter" # output to log
@@ -38,7 +40,7 @@ for _ in {1..20}; do # number of iterations
   simple_counter=0                # number of fib jobs completed
   end=$((SECONDS + increment))           # 10 seconds
   while [ $SECONDS -lt $end ]; do # continue for 10 seconds
-    python3 job.py $simple_counter 15 27 >>/dev/null &&
+    python3 job.py $simple_counter $threads $depth >>/dev/null &&
       simple_counter=$((simple_counter + 1)) # run job and increment counter
   done
   # killall python3 && echo "kill python"
@@ -50,7 +52,7 @@ done
 #echo "info: run number, iterations, time, threads, depth" >>Logs/log_"$1".txt
 #echo "      $1          20          30s   15       27" >>Logs/log_"$1".txt
 # add line numbers to info file
-python3 processing.py "$1" 20 $increment 15 27 # run number, iterations, time, threads, depth
+python3 processing.py "$1" 20 $increment $threads $depth # run number, iterations, time, threads, depth
 git add .
 git commit -m "add and process overhead experiment $1"
 git push # add to git
