@@ -42,8 +42,8 @@ for _ in {1..20}; do # number of iterations
   done
   # killall python3 && echo "kill python"
   echo $simple_counter >>Logs/log_"$1".txt && echo "Standard: $simple_counter" # output to log
-  echo wc -l rawTwo.txt >>Logs/log_"$1".txt
-  echo wc -l raw.txt >>Logs/log_"$1".txt
+  wc -l rawTwo.txt >>Logs/log_"$1".txt
+  wc -l raw.txt >>Logs/log_"$1".txt
   echo "Run $runNumber Complete" && runNumber=$((runNumber + 1))
 done
 #echo "info: run number, iterations, time, threads, depth" >>Logs/log_"$1".txt
