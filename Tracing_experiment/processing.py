@@ -16,19 +16,20 @@ def get_data(lines):
     two_run = []
     tracing_run = []
     standard_run = []
-    for counter in range(0, len(lines), 3):
+    two_lines = [] # number of tracing events
+    tracing_lines = [] # number of context switches
+    for counter in range(0, len(lines), 5):
         two_run.append(lines[counter])
         tracing_run.append(lines[counter + 1])
         standard_run.append(lines[counter + 2])
+        two_lines.append(lines[counter + 3])
+        tracing_lines.append(lines[counter + 4])
     # process average min and max
     two_info = (round(sum(two_run) / len(two_run), 3), min(two_run), max(two_run))
     tracing_info = (round(sum(tracing_run) / len(tracing_run), 3), min(tracing_run), max(tracing_run))
     standard_info = (round(sum(standard_run) / len(standard_run), 3), min(standard_run), max(standard_run))
-    difference_info = (two_run, tracing_run, standard_run)
-
-    def calc_diff(runA, runB):
-        round(sum(runA) / sum(runB), 3)
-
+    difference_info = (two_run, tracing_run, standard_run, sum(two_lines) / sum(two_run), sum(tracing_lines) / sum(tracing_run))
+    # calculate differences
     total_difference = [round(sum(standard_run) / sum(two_run), 3), round(sum(standard_run) / sum(tracing_run), 3), round(sum(tracing_run) / sum(two_run), 3)]
     return two_info, tracing_info, standard_info, difference_info, total_difference
 
@@ -53,5 +54,5 @@ if __name__ == "__main__":
         f.write("Tracing runs: " + str(tracing_info) + "\n")
         f.write("Normal runs : " + str(standard_info) + "\n")
         f.write("Two tracing standard: " + str(diff_runs) + "\n")
-        f.write("standard / two | standard / tracing | tracing / two\n")
+        f.write("standard / two | standard / tracing | tracing / two | events / runs | cs / runs\n")
         f.write("Total diffs: " + str(total_difference) + "\n")
