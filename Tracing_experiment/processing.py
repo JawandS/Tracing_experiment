@@ -34,7 +34,7 @@ def get_data(lines):
     difference_info = (two_run, tracing_run, standard_run)
     # calculate differences
     total_difference = [round(sum(standard_run) / sum(two_run), 3), round(sum(standard_run) / sum(tracing_run), 3),
-                        round(sum(tracing_run) / sum(two_run), 3), (sum(two_lines) / sum(two_run)) / (sum(tracing_lines) / sum(tracing_run))]
+                        round(sum(tracing_run) / sum(two_run), 3), round((sum(two_lines) / sum(two_run)) / (sum(tracing_lines) / sum(tracing_run)), 3)]
     return two_info, tracing_info, standard_info, difference_info, total_difference
 
 
@@ -58,5 +58,5 @@ if __name__ == "__main__":
         f.write("Tracing runs: " + str(tracing_info) + "\n")
         f.write("Normal runs : " + str(standard_info) + "\n")
         f.write("Two tracing standard: " + str(diff_runs) + "\n")
-        f.write("standard / two | standard / tracing | tracing / two | tracing events / two events\n")
+        f.write("standard / two | standard / tracing | tracing / two | two events / tracing events\n")
         f.write("Total diffs: " + str(total_difference) + "\n")
