@@ -16,7 +16,7 @@ for _ in {1..20}; do # number of iterations
   two_counter=0 # number of fib jobs completed
   # shellcheck disable=SC2024
   sudo bpftrace two_probes.bt >>rawTwo.txt & # being tracing
-  end=$((SECONDS + increment))                      # 10 seconds
+  end=$((SECONDS + increment))               # 10 seconds
   while [ $SECONDS -lt $end ]; do            # continue for 10 seconds
     python3 job.py two_counter $threads $depth >>/dev/null &&
       two_counter=$((two_counter + 1)) # run job and increment counter
@@ -28,7 +28,7 @@ for _ in {1..20}; do # number of iterations
   tracing_counter=0 # number of fib jobs completed
   # shellcheck disable=SC2024
   sudo bpftrace context_switch_probe.bt >>raw.txt & # begin tracing
-  end=$((SECONDS + increment))                             # 10 seconds
+  end=$((SECONDS + increment))                      # 10 seconds
   while [ $SECONDS -lt $end ]; do                   # continue for 10 seconds
     python3 job.py $tracing_counter $threads $depth >>/dev/null &&
       tracing_counter=$((tracing_counter + 1)) # run job and increment counter
@@ -38,7 +38,7 @@ for _ in {1..20}; do # number of iterations
   # third set - without tracing
   sleep 1                         # wait for 1 second
   simple_counter=0                # number of fib jobs completed
-  end=$((SECONDS + increment))           # 10 seconds
+  end=$((SECONDS + increment))    # 10 seconds
   while [ $SECONDS -lt $end ]; do # continue for 10 seconds
     python3 job.py $simple_counter $threads $depth >>/dev/null &&
       simple_counter=$((simple_counter + 1)) # run job and increment counter

@@ -38,14 +38,8 @@ def get_data(lines):
     return two_info, tracing_info, standard_info, difference_info, total_difference
 
 
-if __name__ == "__main__":
-    # get the run number
-    args = sys.argv
-    if len(args) > 1:
-        run = args[1]
-    else:
-        run = '1'
-        args = ["", run, 20, "30s", 15, 27]
+def main(args):
+    runs = args[1]
     # read file
     lines = read_file("Logs/log_" + run + ".txt")
     # process data
@@ -57,6 +51,21 @@ if __name__ == "__main__":
         f.write("Two probes  : " + str(two_info) + "\n")
         f.write("Tracing runs: " + str(tracing_info) + "\n")
         f.write("Normal runs : " + str(standard_info) + "\n")
-        f.write("Two tracing standard: " + str(diff_runs) + "\n")
         f.write("standard / two | standard / tracing | tracing / two | two events / tracing events\n")
         f.write("Total diffs: " + str(total_difference) + "\n")
+        f.write("twoProbes=\n")
+        f.write(str(diff_runs[0]) + "\n")
+        f.write("tracingRuns=\n")
+        f.write(str(diff_runs[1]) + "\n")
+        f.write("standardRuns=\n")
+        f.write(str(diff_runs[2]) + "\n")
+
+if __name__ == "__main__":
+    # get the run number
+    args = sys.argv
+    if len(args) > 1:
+        run = args[1]
+    else:
+        run = "5"
+        args = ["", run, 20, "20s", 15, 27]
+    main(args)
