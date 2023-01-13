@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-run_num = 2
+run_num = 4
 with open(f"Results/result_{run_num}.txt") as file:
     #  get data
     lines = [line.rstrip() for line in file]
@@ -18,5 +18,4 @@ with open(f"Results/result_{run_num}.txt") as file:
     # plot data
     fig = sns.scatterplot(x='Run', y='value', hue='variable', data=pd.melt(data_preproc, ['Run']))
     fig.set(xlabel='Run Number', ylabel='Change from Standard (%)')
-    plt.show()
-    plt.savefig(f"Figures/figure_{run_num}.png")
+    fig.get_figure().savefig(f"Figures/figure_{run_num}.png")
