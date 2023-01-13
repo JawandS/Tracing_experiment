@@ -7,7 +7,7 @@ args = sys.argv
 if len(args) > 1:
     run_num = args[1]
 else:
-    run_num = "C1"
+    run_num = "5"
 with open(f"Results/result_{run_num}.txt") as file:
     #  get data
     lines = [line.rstrip() for line in file]
@@ -22,5 +22,5 @@ with open(f"Results/result_{run_num}.txt") as file:
          "Standard": [((standard[i] / standard[i]) - 1) * 100 for i in range(len(standard))]})
     # plot data
     fig = sns.scatterplot(x='Run', y='value', hue='variable', data=pd.melt(data_preproc, ['Run']))
-    fig.set(xlabel='Run Number', ylabel='Change from Standard (%)')
+    fig.set(xlabel='Run Number', ylabel='Percent Decrease from Standard')
     fig.get_figure().savefig(f"Figures/figure_{run_num}.png")
