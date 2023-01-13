@@ -1,8 +1,14 @@
+import sys
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-run_num = 4
+args = sys.argv
+if len(args) > 1:
+    run_num = int(args[1])
+else:
+    run_num = 4
 with open(f"Results/result_{run_num}.txt") as file:
     #  get data
     lines = [line.rstrip() for line in file]
