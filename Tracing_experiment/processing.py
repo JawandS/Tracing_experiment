@@ -66,6 +66,6 @@ if __name__ == "__main__":
     if len(args) > 1:
         run = args[1]
     else:
-        run = "5"
+        run = "C2"
         args = ["", run, 20, "20s", 15, 27]
     main(args)

@@ -28,7 +28,5 @@ if __name__ == "__main__":
     if len(args) > 1:
         run_num = args[1]
     else:
-        run_num = "5"
-    for _ in range(2, 6):
-        main(_)
-    main("C1")
+        run_num = "C2"
+    main(run_num)

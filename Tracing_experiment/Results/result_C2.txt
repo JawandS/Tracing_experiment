@@ -1,4 +1,4 @@
-iterations 20 time 20 threads 15 depth 27
+iterations 20 time 20s threads 15 depth 27
               average, min, max
 Two probes  : (2134.6, 2126.0, 2142.0)
 Tracing runs: (2155.55, 2151.0, 2159.0)
