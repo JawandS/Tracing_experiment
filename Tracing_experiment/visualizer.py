@@ -20,7 +20,9 @@ def main(run_num):
              "Standard": [((standard[i] / standard[i]) - 1) * 100 for i in range(len(standard))]})
         # plot data
         fig = sns.scatterplot(x='Run', y='value', hue='variable', data=pd.melt(data_preproc, ['Run']))
-        fig.set(xlabel='Run Number', ylabel='Percent Change from Standard')
+        fig.set(xlabel='Iteration', ylabel='Change from Standard (%)')
+        fig.set_xticks([i for i in range(1, len(runNums) + 1)])
+        fig.legend(loc='center right')
         fig.get_figure().savefig(f"Figures/figure_{run_num}.png")
         # close the plot
         plt.close()
@@ -31,5 +33,7 @@ if __name__ == "__main__":
     if len(args) > 1:
         run_num = args[1]
     else:
-        run_num = "C2"
-    main(run_num)
+        # run_nums = ["2", "3", "4", "5", "C1", "C2"]
+        run_nums = ["2"]
+        for run_num in run_nums:
+            main(run_num)
