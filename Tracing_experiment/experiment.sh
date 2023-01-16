@@ -1,5 +1,5 @@
 #!/bin/bash
-echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+sudo echo "$2" >>/sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
 iterationCounter=0
 increment=20
 threads=15
@@ -53,8 +53,8 @@ done
 #echo "info: run number, iterations, time, threads, depth" >>Logs/log_"$1".txt
 #echo "      $1          20          30s   15       27" >>Logs/log_"$1".txt
 # add line numbers to info file
-python3 processing.py "$1" 20 $increment $threads $depth # run number, iterations, time, threads, depth
-python3 visualizer.py "$1"                               # add visual
+python3 processing.py "$1" 20 $increment $threads $depth "$2" # run number, iterations, time, threads, depth, governor
+python3 visualizer.py "$1"                                    # add visual
 git add .
 git commit -m "add and process overhead experiment $1"
 git push # add to git

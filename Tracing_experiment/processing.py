@@ -44,19 +44,19 @@ def get_data(lines):
 
 
 def main(args):
-    runs = args[1]
+    run = args[1]
     # read file
     lines = read_file("Logs/log_" + run + ".txt")
     # process data
     two_info, tracing_info, standard_info, diff_runs, total_difference = get_data(lines)
     # write results to file
     with open("Results/result_" + run + ".txt", 'w') as f:
-        f.write(f"iterations {args[2]} time {args[3]} threads {args[4]} depth {args[5]}\n")
+        f.write(f"iterations {args[2]} time {args[3]} threads {args[4]} depth {args[5]} governor {args[6]}\n")
         f.write("              average, min, max\n")
         f.write("Two probes  : " + str(two_info) + "\n")
         f.write("Tracing runs: " + str(tracing_info) + "\n")
         f.write("Normal runs : " + str(standard_info) + "\n")
-        f.write("two v standard | tracing v standard | two v tracing | two events / tracing events\n")
+        f.write("two v standard | tracing v standard | two v tracing | two events v tracing events\n")
         f.write("Total diffs: " + str(total_difference) + "\n")
         f.write("twoProbes=\n")
         f.write(str(diff_runs[0]) + "\n")
@@ -73,8 +73,8 @@ if __name__ == "__main__":
         run = args[1]
         main(args)
     else:
-        runs = ["2", "3", "4", "5", "C1", "C2"]
-        # runs ["6"]
+        # runs = ["2", "3", "4", "5", "C1", "C2"]
+        runs = ["6"]
         for run in runs:
-            args = ["", run, 20, "20s", 15, 27]
+            args = ["", run, 20, "20s", 15, 27, "performance"]
             main(args)
