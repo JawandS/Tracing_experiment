@@ -1,0 +1,100 @@
+551
+577
+553
+3786708 rawTwo.txt
+2207869 raw.txt
+579
+586
+561
+3719337 rawTwo.txt
+2279504 raw.txt
+563
+585
+559
+3835459 rawTwo.txt
+2267027 raw.txt
+568
+573
+563
+3790577 rawTwo.txt
+2244679 raw.txt
+576
+584
+567
+3788809 rawTwo.txt
+2375500 raw.txt
+575
+582
+564
+3810676 rawTwo.txt
+2342122 raw.txt
+569
+582
+565
+3795856 rawTwo.txt
+2334458 raw.txt
+571
+578
+561
+3757841 rawTwo.txt
+2300038 raw.txt
+571
+583
+565
+3882444 rawTwo.txt
+2237928 raw.txt
+575
+576
+564
+3911844 rawTwo.txt
+2275595 raw.txt
+566
+585
+561
+3766112 rawTwo.txt
+2211399 raw.txt
+572
+581
+560
+3784338 rawTwo.txt
+2291494 raw.txt
+570
+585
+563
+3805068 rawTwo.txt
+2291318 raw.txt
+568
+582
+565
+3827534 rawTwo.txt
+2303940 raw.txt
+569
+588
+559
+3853510 rawTwo.txt
+2274199 raw.txt
+568
+573
+565
+3775383 rawTwo.txt
+2208772 raw.txt
+575
+586
+558
+3853281 rawTwo.txt
+2230829 raw.txt
+578
+583
+560
+3769344 rawTwo.txt
+2336457 raw.txt
+568
+582
+557
+3978857 rawTwo.txt
+2191006 raw.txt
+579
+580
+568
+3814513 rawTwo.txt
+2286803 raw.txt
