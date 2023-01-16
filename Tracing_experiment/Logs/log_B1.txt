@@ -1,0 +1,100 @@
+476
+461
+464
+2195108 rawTwo.txt
+1136558 raw.txt
+483
+465
+462
+2293424 rawTwo.txt
+1155613 raw.txt
+480
+463
+463
+2267744 rawTwo.txt
+1171350 raw.txt
+484
+461
+464
+2267690 rawTwo.txt
+1142836 raw.txt
+478
+461
+462
+2277127 rawTwo.txt
+1151637 raw.txt
+478
+460
+467
+2256150 rawTwo.txt
+1143267 raw.txt
+484
+460
+463
+2254546 rawTwo.txt
+1121058 raw.txt
+472
+462
+465
+2299998 rawTwo.txt
+1160083 raw.txt
+478
+464
+463
+2158391 rawTwo.txt
+1151327 raw.txt
+478
+460
+463
+2278198 rawTwo.txt
+1132268 raw.txt
+481
+461
+464
+2230219 rawTwo.txt
+1130709 raw.txt
+478
+461
+463
+2202975 rawTwo.txt
+1163953 raw.txt
+478
+463
+463
+2101769 rawTwo.txt
+1149720 raw.txt
+484
+460
+464
+2250786 rawTwo.txt
+1143038 raw.txt
+475
+460
+463
+2215998 rawTwo.txt
+1123744 raw.txt
+479
+462
+463
+2212942 rawTwo.txt
+1121257 raw.txt
+476
+463
+464
+2264760 rawTwo.txt
+1144469 raw.txt
+482
+461
+463
+2251908 rawTwo.txt
+1156932 raw.txt
+474
+461
+463
+2276303 rawTwo.txt
+1160872 raw.txt
+476
+462
+463
+2262785 rawTwo.txt
+1161101 raw.txt
