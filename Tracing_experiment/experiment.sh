@@ -2,8 +2,8 @@
 echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
 iterationCounter=0
 increment=20
-threads=15
-depth=27
+threads=30
+depth=54
 # run experiment
 for _ in {1..20}; do # number of iterations
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"

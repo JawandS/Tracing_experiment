@@ -76,5 +76,5 @@ if __name__ == "__main__":
         # runs = ["2", "3", "4", "5", "C1", "C2"]
         runs = ["6"]
         for run in runs:
-            args = ["", run, 20, "20s", 15, 27, "performance"]
+            args = ["", run, 20, "20s", 15, 27, "powersave"]
             main(args)
