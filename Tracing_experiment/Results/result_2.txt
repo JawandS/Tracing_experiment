@@ -3,8 +3,8 @@ iterations 20 time 20s threads 15 depth 27
 Two probes  : (1682.55, 1673.0, 1693.0)
 Tracing runs: (1687.6, 1646.0, 1703.0)
 Normal runs : (1723.9, 1718.0, 1730.0)
-standard / two | standard / tracing | tracing / two | two events / tracing events
-Total diffs: [1.025, 1.022, 1.003, 1.881]
+two v standard | tracing v standard | two v tracing | two events / tracing events
+Total diffs: [-2.4, -2.1, -0.3, 0.881]
 twoProbes=
 [1678.0, 1684.0, 1679.0, 1685.0, 1685.0, 1681.0, 1684.0, 1681.0, 1684.0, 1693.0, 1688.0, 1683.0, 1680.0, 1678.0, 1673.0, 1682.0, 1688.0, 1689.0, 1683.0, 1673.0]
 tracingRuns=

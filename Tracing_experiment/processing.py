@@ -27,15 +27,19 @@ def get_data(lines):
         standard_run.append(lines[counter + 2])
         two_lines.append(lines[counter + 3])
         tracing_lines.append(lines[counter + 4])
-    # process average min and max
-    two_info = (round(sum(two_run) / len(two_run), 3), min(two_run), max(two_run))
-    tracing_info = (round(sum(tracing_run) / len(tracing_run), 3), min(tracing_run), max(tracing_run))
-    standard_info = (round(sum(standard_run) / len(standard_run), 3), min(standard_run), max(standard_run))
     difference_info = (two_run, tracing_run, standard_run)
+    # process average min and max
+    two_total = sum(two_run)
+    tracing_total = sum(tracing_run)
+    standard_total = sum(standard_run)
+    two_info = (round(two_total / len(two_run), 3), min(two_run), max(two_run))
+    tracing_info = (round(tracing_total / len(tracing_run), 3), min(tracing_run), max(tracing_run))
+    standard_info = (round(standard_total / len(standard_run), 3), min(standard_run), max(standard_run))
     # calculate differences
-    total_difference = [round(sum(standard_run) / sum(two_run), 3), round(sum(standard_run) / sum(tracing_run), 3),
-                        round(sum(tracing_run) / sum(two_run), 3),
-                        round((sum(two_lines) / sum(two_run)) / (sum(tracing_lines) / sum(tracing_run)), 3)]
+    total_difference = [round((two_total / standard_total) - 1, 3) * 100,
+                        round((tracing_total / standard_total) - 1, 3) * 100,
+                        round((two_total / tracing_total) - 1, 3) * 100,
+                        round(((sum(two_lines) / two_total) / (sum(tracing_lines) / tracing_total)) - 1, 3)]
     return two_info, tracing_info, standard_info, difference_info, total_difference
 
 
@@ -52,7 +56,7 @@ def main(args):
         f.write("Two probes  : " + str(two_info) + "\n")
         f.write("Tracing runs: " + str(tracing_info) + "\n")
         f.write("Normal runs : " + str(standard_info) + "\n")
-        f.write("standard / two | standard / tracing | tracing / two | two events / tracing events\n")
+        f.write("two v standard | tracing v standard | two v tracing | two events / tracing events\n")
         f.write("Total diffs: " + str(total_difference) + "\n")
         f.write("twoProbes=\n")
         f.write(str(diff_runs[0]) + "\n")
@@ -69,6 +73,8 @@ if __name__ == "__main__":
         run = args[1]
         main(args)
     else:
-        run = "C2"
-        args = ["", run, 20, "20s", 15, 27]
-        main(args)
+        runs = ["2", "3", "4", "5", "C1", "C2"]
+        # runs ["6"]
+        for run in runs:
+            args = ["", run, 20, "20s", 15, 27]
+            main(args)
