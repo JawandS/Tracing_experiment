@@ -1,4 +1,5 @@
 #!/bin/bash
+git pull
 echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
 iterationCounter=0
 increment=20
