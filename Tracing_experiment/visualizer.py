@@ -9,7 +9,7 @@ def main(run_num):
     with open(f"Results/result_{run_num}.txt") as file:
         #  get data
         lines = [line.rstrip() for line in file]
-        TIME = 20  # length of each job set
+        # TIME = 20  # length of each job set
         twoProbes = [elem for elem in eval(lines[8])]
         tracing = [elem for elem in eval(lines[10])]
         standard = [elem for elem in eval(lines[12])]
@@ -34,6 +34,6 @@ if __name__ == "__main__":
         run_num = args[1]
     else:
         # run_nums = ["2", "3", "4", "5", "C1", "C2"]
-        run_nums = ["2"]
+        run_nums = ["6"]
         for run_num in run_nums:
             main(run_num)
