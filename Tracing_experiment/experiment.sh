@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "$2" >> /dev/null/ | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
+echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
 iterationCounter=0
 increment=20
 threads=15
