@@ -67,14 +67,18 @@ def main(args):
 
 
 if __name__ == "__main__":
+    import visualizer
+
     # get the run number
     args = sys.argv
     if len(args) > 1:
         run = args[1]
         main(args)
+        visualizer.main(run)
     else:
         # runs = ["2", "3", "4", "5", "C1", "C2"]
         runs = ["6"]
         for run in runs:
             args = ["", run, 20, "20s", 15, 27, "powersave"]
             main(args)
+            visualizer.main(run)
