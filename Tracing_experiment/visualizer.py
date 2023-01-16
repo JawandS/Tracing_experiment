@@ -1,7 +1,9 @@
 import sys
+
+import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-import matplotlib.pyplot as plt
+
 
 def main(run_num):
     with open(f"Results/result_{run_num}.txt") as file:
@@ -22,6 +24,7 @@ def main(run_num):
         fig.get_figure().savefig(f"Figures/figure_{run_num}.png")
         # close the plot
         plt.close()
+
 
 if __name__ == "__main__":
     args = sys.argv

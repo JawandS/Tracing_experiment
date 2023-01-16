@@ -34,7 +34,8 @@ def get_data(lines):
     difference_info = (two_run, tracing_run, standard_run)
     # calculate differences
     total_difference = [round(sum(standard_run) / sum(two_run), 3), round(sum(standard_run) / sum(tracing_run), 3),
-                        round(sum(tracing_run) / sum(two_run), 3), round((sum(two_lines) / sum(two_run)) / (sum(tracing_lines) / sum(tracing_run)), 3)]
+                        round(sum(tracing_run) / sum(two_run), 3),
+                        round((sum(two_lines) / sum(two_run)) / (sum(tracing_lines) / sum(tracing_run)), 3)]
     return two_info, tracing_info, standard_info, difference_info, total_difference
 
 
@@ -60,12 +61,14 @@ def main(args):
         f.write("standardRuns=\n")
         f.write(str(diff_runs[2]) + "\n")
 
+
 if __name__ == "__main__":
     # get the run number
     args = sys.argv
     if len(args) > 1:
         run = args[1]
+        main(args)
     else:
         run = "C2"
         args = ["", run, 20, "20s", 15, 27]
-    main(args)
+        main(args)

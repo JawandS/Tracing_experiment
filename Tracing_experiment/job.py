@@ -1,4 +1,5 @@
-import time, sys
+import sys
+import time
 from _thread import start_new_thread
 
 
@@ -23,4 +24,3 @@ if __name__ == "__main__":
     T = int(args[1])  # number of threads
     n = int(args[2])  # depth of fib job
     server_workload(T, n)  # run fib job
-    # print(f"{name}, {T} threads, depth {n}, {round(time.time() - start_time, 3)}s") # output job info
