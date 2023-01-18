@@ -221,12 +221,14 @@ if __name__ == "__main__":
         num = sys.argv[1]
     else:
         num = "1"
+
     split_log = split_by_CPU("Logs/log_" + num + ".txt")
     # trace the Logs for analysis
     trace_logs(split_log, num)
+    # calculate percentage time on each CPU by pid
+    process_time_by_pid(split_log, num)
+
     # calculate the percent time each process takes on each CPU
     # process_time_by_CPU(split_log, num)
     # check for difference greater than 0.1
-    check_diffs(split_log, num, 0.1)
-    # calculate percentage time on each CPU by pid
-    process_time_by_pid(split_log, num)
+    # check_diffs(split_log, num, 0.1)

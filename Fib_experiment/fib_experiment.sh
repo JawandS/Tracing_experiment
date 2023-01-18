@@ -23,8 +23,6 @@ killall -q bpftrace
 echo "length: $increment | threads: $threads | depth: $depth | jobs: $counter" >>Results/results.txt # output to log
 sudo python3 processing.py "$1"
 # add to git
-find . -size +99M | cat >>../.gitignore
-git commit -m "update .gitignore"
 git add .
 git commit -m "add and process $1"
 git push
