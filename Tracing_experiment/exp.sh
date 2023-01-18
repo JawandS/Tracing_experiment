@@ -2,15 +2,15 @@
 # start overhead
 git pull
 echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
-increment=10
+increment=3
 threads=20
 depth=30
 # define experiment
 experiment() {
   # setup
-  truncate -s 0 raw.txt
   killall -q python3
   killall -q bpftrace
+  truncate -s 0 raw.txt
   sleep 1   # wait for 1 second
   counter=0 # number of fib jobs completed
   # run tracing if necessary
@@ -34,7 +34,7 @@ experiment() {
 }
 # run experiment
 iterationCounter=0
-for _ in {1..20}; do # number of iterations
+for _ in {1..2}; do # number of iterations
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
   experiment "$1" "" # base run
   experiment "$1" A  # context switch
