@@ -1,0 +1,40 @@
+179
+0 raw.txt
+252
+1309598 raw.txt
+253
+2457446 raw.txt
+251
+2374281 raw.txt
+251
+2 raw.txt
+251
+1282571 raw.txt
+252
+2475603 raw.txt
+252
+2388551 raw.txt
+249
+2 raw.txt
+250
+1313484 raw.txt
+251
+2457279 raw.txt
+252
+2365059 raw.txt
+250
+2 raw.txt
+255
+1342763 raw.txt
+253
+2474117 raw.txt
+252
+2370135 raw.txt
+252
+2 raw.txt
+251
+1282553 raw.txt
+253
+2455493 raw.txt
+253
+2323335 raw.txt
