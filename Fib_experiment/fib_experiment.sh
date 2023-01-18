@@ -9,7 +9,7 @@ depth=30
 killall -q python3
 killall -q bpftrace
 # begin tracing
-sudo bpftrace two_probes.bt >>Logs/log_"$1".txt &
+sudo bpftrace context_switch_probe.bt >>Logs/log_"$1".txt &
 # start workload
 counter=0
 end=$((SECONDS + increment))
