@@ -24,15 +24,13 @@ experiment() {
     python3 job.py counter $threads $depth >>/dev/null &&
       counter=$((counter + 1)) # run job and increment counter
   done
-  # add jobs completed and output size to log
+  # end tracing
+  killall -q bpftrace
+  # update logs
   echo $counter >>Logs/log_"$1".txt # add jobs done to log
-  echo "Completed: $counter for $2"        # output to console
-  if [ "$2" != "" ]; then
-    wc -l raw.txt >>Logs/log_"$1".txt
-  else
-    echo 0 >>Logs/log_"$1".txt # add size of log
-  fi
-  killall -q bpftrace # end tracing
+  outputSize='wc -l raw.txt'
+  echo "$outputSize" >>Logs/log_"$1".txt               # add output size to log
+  echo "Completed: $counter for $2 with $outputSize events" # output to console
 }
 # run experiment
 iterationCounter=0
