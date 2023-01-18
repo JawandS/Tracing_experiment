@@ -1,0 +1,3 @@
+tracepoint:rcu:rcu_utilization {
+    printf("rcu utilization.\n");
+}
