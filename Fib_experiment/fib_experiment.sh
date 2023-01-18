@@ -5,7 +5,7 @@ echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governo
 increment=15
 threads=20
 depth=30
-isVariable=0
+isVariable="$2"
 # clear previous jobs
 killall -q python3
 killall -q bpftrace
@@ -21,9 +21,9 @@ done
 killall -q python3
 killall -q bpftrace
 # process results
-echo "length: $increment | threads: $threads | depth: $depth | jobs: $counter | isVariable: $isVariable" | tee Results/results.txt # output to log
+echo "job: $1 | length: $increment | threads: $threads | depth: $depth | jobs: $counter | isVariable: $isVariable" | tee Results/results.txt # output to log
 #sudo python3 processing.py "$1"
 # add to git
 git add .
-git commit -m -q "add and process $1"
+git commit -q -m "add and process $1"
 git push
