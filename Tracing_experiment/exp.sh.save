@@ -14,7 +14,7 @@ experiment() {
   sleep 1   # wait for 1 second
   counter=0 # number of fib jobs completed
   # run tracing if necessary
-  if [ "$2" != "" ]; then
+  if [ $2  ""; then
     # shellcheck disable=SC2024
     sudo bpftrace Script/"$2".bt >>raw.txt & # being tracing
   fi
@@ -27,7 +27,7 @@ experiment() {
   # add jobs completed and output size to log
   echo $counter >>Logs/log_"$1".txt # add jobs done to log
   echo "Completed: $counter for $2"        # output to console
-  if [ "$2" != "" ]; then
+  if $2 != ""; then
     wc -l raw.txt >>Logs/log_"$1".txt
   else
     echo 0 >>Logs/log_"$1".txt # add size of log
