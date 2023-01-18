@@ -1,7 +1,7 @@
 #!/bin/bash
 # setup
 git pull -q
-sudo echo performance >>/sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
+echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
 increment=15
 threads=20
 depth=30
