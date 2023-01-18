@@ -21,9 +21,9 @@ done
 killall -q python3
 killall -q bpftrace
 # process results
-echo "length: $increment | threads: $threads | depth: $depth | jobs: $counter | isVariable: $isVariable" >>Results/results.txt # output to log
+echo "length: $increment | threads: $threads | depth: $depth | jobs: $counter | isVariable: $isVariable" | tee Results/results.txt # output to log
 #sudo python3 processing.py "$1"
 # add to git
 git add .
-git commit -m "add and process $1"
+git commit -m -q "add and process $1"
 git push
