@@ -33,7 +33,7 @@ import time
 timestamps.append(time.time())  # 1: stop imports, start setup
 
 # load and convert data to np.array
-df = pd.read_csv('Archive/Data/data.csv', index_col=0)
+df = pd.read_csv('Fib_experiment/Archive/Data/data.csv', index_col=0)
 time_index = np.array(df['Date'])
 data = np.array(df['Monthly Mean Total Sunspot Number'])
 

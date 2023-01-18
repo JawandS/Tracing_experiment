@@ -12,7 +12,9 @@ def fib(n):
 
 # multiple fibonacci threads
 def server_workload(numThreads, depth):
-    for _ in range(numThreads):
+    for counter in range(numThreads):
+        if counter % 2 == 0: # double depth every other thread
+            depth *= 2
         start_new_thread(fib, (depth,))
 
 
@@ -23,4 +25,5 @@ if __name__ == "__main__":
     name = args[0]  # name of the job
     numThreads = int(args[1])  # number of threads
     depth = int(args[2])  # depth of fib job
+    isVariable = bool(int(args[3]))  # is the workload variable
     server_workload(numThreads, depth)  # run fib job
