@@ -15,7 +15,7 @@ experiment() {
   sleep 1   # wait for 1 second
   counter=0 # number of fib jobs completed
   # run tracing if necessary
-  if [ "$2" != "" ]; then
+  if [ "$2" != "N" ]; then
     # shellcheck disable=SC2024
     sudo bpftrace Script/"$2".bt >>raw.txt & # being tracing
   fi
@@ -37,7 +37,7 @@ experiment() {
 iterationCounter=0
 for _ in {1..5}; do # number of iterations
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
-  experiment "$1" "" # base run
+  experiment "$1" N # base run
   experiment "$1" A  # context switch
   experiment "$1" B  # context switch + rcu
   experiment "$1" C  # rcu
