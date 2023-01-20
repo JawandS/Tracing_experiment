@@ -1,0 +1,60 @@
+2481
+0 raw.txt
+2549
+13513217 raw.txt
+2542
+23806827 raw.txt
+2542
+22033002 raw.txt
+2538
+2 raw.txt
+2547
+23186296 raw.txt
+2527
+0 raw.txt
+2531
+13296316 raw.txt
+2545
+23731641 raw.txt
+2534
+21899631 raw.txt
+2525
+2 raw.txt
+2545
+22724590 raw.txt
+2528
+0 raw.txt
+2536
+13445976 raw.txt
+2540
+23792073 raw.txt
+2543
+21943543 raw.txt
+2532
+2 raw.txt
+2556
+23601190 raw.txt
+2530
+0 raw.txt
+2537
+13333601 raw.txt
+2546
+23854834 raw.txt
+2535
+22012211 raw.txt
+2522
+2 raw.txt
+2548
+23577540 raw.txt
+2528
+0 raw.txt
+2520
+12995202 raw.txt
+2547
+23060918 raw.txt
+2529
+21880739 raw.txt
+2522
+2 raw.txt
+2550
+23416823 raw.txt
