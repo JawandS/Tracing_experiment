@@ -5,3 +5,7 @@ tracepoint:rcu:rcu_utilization {
 tracepoint:syscalls:sys_enter_nanosleep {
     printf("%s is sleeping at %lu.\n", comm, nsecs);
 }
+
+tracepoint:sched:sched_switch {
+    printf("%s %lu %d %lu\n", comm, pid, cpu, nsecs);
+}
