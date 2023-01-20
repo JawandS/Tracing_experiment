@@ -5,7 +5,7 @@ echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # pow
 increment=10
 threads=20
 depth=30
-iterations=10
+iterations=5
 # define experiment
 experiment() {
   # setup
@@ -35,7 +35,7 @@ experiment() {
 }
 # run experiment
 iterationCounter=0
-for _ in {1..10}; do # number of iterations
+for _ in {1..5}; do # number of iterations
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
   experiment "$1" "" # base run
   experiment "$1" A  # context switch
