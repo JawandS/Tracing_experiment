@@ -1,11 +1,11 @@
 #!/bin/bash
 # start overhead
 git pull
-echo $2 | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
-increment=3
+echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
+increment=10
 threads=20
 depth=30
-iterations=5
+iterations=10
 # define experiment
 experiment() {
   # setup
@@ -35,12 +35,14 @@ experiment() {
 }
 # run experiment
 iterationCounter=0
-for _ in {1..5}; do # number of iterations
+for _ in {1..10}; do # number of iterations
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
   experiment "$1" "" # base run
   experiment "$1" A  # context switch
   experiment "$1" B  # context switch + rcu
   experiment "$1" C  # rcu
+  experiment "$1" D  # blank
+  experiment "$1" E  # rcu + enter sleep
 done
 python3 process.py "$1" $iterations $increment $threads $depth "$2" # run number, iterations, time, threads, depth, governor
 git add .

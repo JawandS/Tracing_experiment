@@ -15,7 +15,7 @@ def read_file(file):
 
 
 def get_data(lines):
-    RUNS = 4  # number of runs in each experiment
+    RUNS = 6  # number of runs in each experiment
     numArr = RUNS * 2
     # split into tracing and not tracing runs
     data = [[] for _ in range(numArr)]  # runs and log size

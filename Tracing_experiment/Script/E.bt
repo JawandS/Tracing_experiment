@@ -1,0 +1,7 @@
+tracepoint:rcu:rcu_utilization {
+    printf("rcu utilization at %lu\n", nsecs);
+}
+
+tracepoint:syscalls:sys_enter_nanosleep {
+    printf("%s is sleeping at %lu.\n", comm, nsecs);
+}

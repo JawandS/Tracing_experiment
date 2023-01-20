@@ -3,5 +3,5 @@ tracepoint:sched:sched_switch {
 }
 
 tracepoint:rcu:rcu_utilization {
-    printf("rcu utilization.\n");
+    printf("rcu utilization at %lu\n", nsecs);
 }
