@@ -2,10 +2,10 @@
 # start overhead
 git pull
 echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
-increment=10
+increment=30
 threads=20
 depth=30
-iterations=10
+iterations=5
 # define experiment
 experiment() {
   # setup
@@ -14,7 +14,7 @@ experiment() {
   truncate -s 0 raw.txt
   sleep 1 # wait for 1 second
   # run tracing if necessary
-  if [ "$2" != "N" ]; then
+  if [ "$2" != "X" ]; then
     # shellcheck disable=SC2024
     sudo bpftrace Script/"$2".bt >>raw.txt & # being tracing
   fi
@@ -36,9 +36,9 @@ experiment() {
 }
 # run experiment
 iterationCounter=0
-for _ in {1..10}; do # number of iterations
+for _ in {1..5}; do # number of iterations
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
-  experiment "$1" N # base run
+  experiment "$1" X # base run
   experiment "$1" A # context switch
   experiment "$1" B # context switch + rcu
   experiment "$1" C # rcu

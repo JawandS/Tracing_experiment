@@ -27,8 +27,8 @@ def get_data(lines):
     allEvents = [sum(data[i]) for i in range(1, numArr, 2)]
     totalEvents = sum(allEvents)
     # process relative amounts
-    relJobs = [round(float(allJobs[i]) / totalJobs, 3) for i in range(0, len(allJobs))]
-    relEvents = [round(float(allEvents[i]) / totalEvents, 3) for i in range(0, len(allEvents))]
+    relJobs = [round(100 * (float(allJobs[i]) / totalJobs), 5) for i in range(0, len(allJobs))]
+    relEvents = [round(100 * (float(allEvents[i]) / totalEvents), 5) for i in range(0, len(allEvents))]
     # return relative values
     return relJobs, relEvents
 
