@@ -5,7 +5,7 @@ echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # pow
 increment=10
 threads=20
 depth=30
-iterations=5
+iterations=10
 # define experiment
 experiment() {
   # setup
@@ -21,6 +21,7 @@ experiment() {
   # run the jobs and count how many get done
   end=$((SECONDS + increment))
   counter=0                       # number of fib jobs completed
+  truncate -s 0 raw.txt # clear file
   while [ $SECONDS -lt $end ]; do # continue for 10 seconds
     python3 job.py counter $threads $depth >>/dev/null &&
       counter=$((counter + 1)) # run job and increment counter
@@ -35,7 +36,7 @@ experiment() {
 }
 # run experiment
 iterationCounter=0
-for _ in {1..5}; do # number of iterations
+for _ in {1..10}; do # number of iterations
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
   experiment "$1" N # base run
   experiment "$1" A # context switch
