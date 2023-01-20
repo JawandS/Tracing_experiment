@@ -21,9 +21,9 @@ experiment() {
   # run the jobs and count how many get done
   end=$((SECONDS + increment))
   counter=0                       # number of fib jobs completed
-  truncate -s 0 raw.txt # clear file
+  truncate -s 0 raw.txt           # clear file
   while [ $SECONDS -lt $end ]; do # continue for 10 seconds
-    python3 job.py counter $threads $depth >>/dev/null &&
+    python3 job.py $counter $threads $depth >>/dev/null &&
       counter=$((counter + 1)) # run job and increment counter
   done
   # end tracing
@@ -37,6 +37,12 @@ experiment() {
 # run experiment
 iterationCounter=0
 for _ in {1..1}; do # number of iterations
+  # warmup phase
+  end=$((SECONDS + 15))
+  while [ $SECONDS -lt $end ]; do # run 15 seconds of warmup
+    python3 job.py "warmup" 9 10 # run job
+  done
+  # experiment phase
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
   experiment "$1" X # base run
   experiment "$1" A # context switch
