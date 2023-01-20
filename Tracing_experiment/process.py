@@ -30,7 +30,7 @@ def get_data(lines):
     relJobs = [round(100 * (float(allJobs[i]) / totalJobs), 5) for i in range(0, len(allJobs))]
     relEvents = [round(100 * (float(allEvents[i]) / totalEvents), 5) for i in range(0, len(allEvents))]
     # return relative values
-    return relJobs, relEvents
+    return relJobs, relEvents, allJobs, allEvents
 
 
 def main(args):
@@ -38,7 +38,7 @@ def main(args):
     # read file
     lines = read_file("Logs/log_" + run + ".txt")
     # process data
-    relJobs, relEvents = get_data(lines)
+    relJobs, relEvents, allJobs, allEvents = get_data(lines)
     # write results to file
     with open("Results/result_" + run + ".txt", 'w') as f:
         f.write(f"iterations {args[2]} | time {args[3]} | threads {args[4]} | depth {args[5]} | governor {args[6]}\n")
@@ -46,6 +46,10 @@ def main(args):
         f.write(f"{relJobs}\n")
         f.write("Relative amounts of events\n")
         f.write(f"{relEvents}\n")
+        f.write("Total amounts of jobs\n")
+        f.write(f"{allJobs}\n")
+        f.write("Total amounts of events\n")
+        f.write(f"{allEvents}\n")
 
 
 if __name__ == "__main__":
@@ -56,7 +60,7 @@ if __name__ == "__main__":
         main(args)
     else:
         # runs = ["2", "3", "4", "5", "C1", "C2"]
-        runs = ["1"]
+        runs = ["3", "4", "5", "6", "7"]
         for run in runs:
             args = ["", run, 20, "20s", 15, 27, "powersave"]
             main(args)

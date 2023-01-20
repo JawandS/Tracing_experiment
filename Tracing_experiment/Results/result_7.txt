@@ -1,5 +1,9 @@
-iterations 1 | time 200 | threads 20 | depth 30 | governor powersave
+iterations 20 | time 20s | threads 15 | depth 27 | governor powersave
 Relative amounts of jobs
 [16.64164, 16.61023, 16.66519, 16.72997, 16.64262, 16.71034]
 Relative amounts of events
 [0.0, 16.53266, 28.71312, 26.17781, 0.0, 28.57641]
+Total amounts of jobs
+[16956.0, 16924.0, 16980.0, 17046.0, 16957.0, 17026.0]
+Total amounts of events
+[0.0, 90342696.0, 156902777.0, 143048547.0, 2.0, 156155716.0]
