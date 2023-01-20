@@ -1,0 +1,60 @@
+838
+0 raw.txt
+837
+4334302 raw.txt
+848
+7921316 raw.txt
+844
+7302433 raw.txt
+840
+4 raw.txt
+848
+7775987 raw.txt
+848
+2 raw.txt
+835
+4391220 raw.txt
+847
+7962322 raw.txt
+846
+7334559 raw.txt
+843
+4 raw.txt
+845
+7761007 raw.txt
+846
+2 raw.txt
+845
+4446983 raw.txt
+846
+7874062 raw.txt
+843
+7263345 raw.txt
+842
+4 raw.txt
+850
+7805862 raw.txt
+847
+2 raw.txt
+848
+4400107 raw.txt
+844
+7570910 raw.txt
+846
+7315193 raw.txt
+847
+4 raw.txt
+848
+7690007 raw.txt
+841
+2 raw.txt
+845
+4471358 raw.txt
+850
+7656145 raw.txt
+845
+7315203 raw.txt
+840
+4 raw.txt
+849
+7757119 raw.txt
