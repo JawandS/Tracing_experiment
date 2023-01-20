@@ -2,10 +2,10 @@
 # start overhead
 git pull
 echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
-increment=30
+increment=200
 threads=20
 depth=30
-iterations=5
+iterations=1
 # define experiment
 experiment() {
   # setup
@@ -36,7 +36,7 @@ experiment() {
 }
 # run experiment
 iterationCounter=0
-for _ in {1..5}; do # number of iterations
+for _ in {1..1}; do # number of iterations
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
   experiment "$1" X # base run
   experiment "$1" A # context switch
