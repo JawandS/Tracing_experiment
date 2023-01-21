@@ -29,6 +29,7 @@ def versionOne(run_num):
 
 
 def versionTwo(run_num):
+    # add bar plots of relative jobs/events for powersave mode
     with open(f"Results/result_{run_num}.txt") as file:
         #  get data
         lines = [line.rstrip() for line in file]
@@ -45,6 +46,22 @@ def versionTwo(run_num):
         sns.despine(fig)
         fig.savefig(f"Figures/Powersave/figure_{run_num}.png")
 
+def versionThree(run_num):
+    # add bar plots of relative jobs/events for powersave mode
+    with open(f"Results/result_{run_num}.txt") as file:
+        #  get data
+        lines = [line.rstrip() for line in file]
+        relJobs = eval(lines[6])
+        relEvents = eval(lines[8])
+        df = pd.DataFrame({
+            'Type': ["X", "A", "B", "C", "D", "E"],
+            'Total Jobs': [elem for elem in relJobs],
+        })
+        fig, ax1 = plt.subplots(figsize=(10, 10))
+        sns.barplot(x='Type', y='Total Jobs', data=df, ax=ax1)
+        sns.despine(fig)
+        fig.savefig(f"Figures/Powersave/figure_abs_{run_num}.png")
+
 
 if __name__ == "__main__":
     args = sys.argv
@@ -55,4 +72,4 @@ if __name__ == "__main__":
         # run_nums = ["2", "3", "4", "5", "C1", "C2"]
         run_nums = [4, 5, 6, 7, 8]
         for run_num in run_nums:
-            versionTwo(run_num)
+            versionThree(run_num)
