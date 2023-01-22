@@ -1,0 +1,48 @@
+217
+0 raw.txt
+188
+6101641 raw.txt
+196
+16369948 raw.txt
+200
+16303119 raw.txt
+213
+2 raw.txt
+193
+19359323 raw.txt
+194
+19630053 raw.txt
+187
+18675722 raw.txt
+216
+0 raw.txt
+187
+5992640 raw.txt
+196
+16259959 raw.txt
+198
+16282880 raw.txt
+214
+2 raw.txt
+197
+19585390 raw.txt
+193
+19511358 raw.txt
+190
+19026829 raw.txt
+216
+0 raw.txt
+189
+6124140 raw.txt
+198
+16498244 raw.txt
+199
+16161921 raw.txt
+214
+2 raw.txt
+192
+18711819 raw.txt
+190
+19450233 raw.txt
+192
+18990268 raw.txt
