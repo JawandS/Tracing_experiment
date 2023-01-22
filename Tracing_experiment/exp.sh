@@ -3,8 +3,8 @@
 git pull
 echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
 increment=15
-threads=250
-depth=40
+threads=300
+depth=50
 iterations=5
 # define experiment
 experiment() {
