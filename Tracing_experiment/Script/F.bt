@@ -9,3 +9,15 @@ tracepoint:syscalls:sys_enter_nanosleep {
 tracepoint:sched:sched_switch {
   printf("sched_switch\n");
 }
+
+tracepoint:sched:sched_wakeup {
+  printf("sched_wakeup\n");
+}
+
+tracepoint:timer:timer_start {
+  printf("timer_start\n");
+}
+
+tracepoint:cpuhp:cpuhp_enter {
+  printf("cpuhp_enter\n");
+}

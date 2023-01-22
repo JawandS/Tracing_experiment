@@ -1,0 +1,39 @@
+tracepoint:rcu:rcu_utilization {
+  printf("rcu_utilization\n");
+}
+
+tracepoint:syscalls:sys_enter_nanosleep {
+  printf("sys_enter_nanosleep\n");
+}
+
+tracepoint:sched:sched_switch {
+  printf("sched_switch\n");
+}
+
+tracepoint:sched:sched_wakeup {
+  printf("sched_wakeup\n");
+}
+
+tracepoint:timer:timer_start {
+  printf("timer_start\n");
+}
+
+tracepoint:cpuhp:cpuhp_enter {
+  printf("cpuhp_enter\n");
+}
+
+tracepoint:syscalls:sys_enter_getcpu {
+  printf("sys_enter_getcpu\n");
+}
+
+tracepoint:syscalls:sys_exit_getcpu {
+  printf("sys_exit_getcpu\n");
+}
+
+tracepoint:rpm:rpm_idle {
+  printf("rpm_idle\n");
+}
+
+tracepoint:sched:sched_swap_numa {
+  printf("sched_swap_numa\n");
+}

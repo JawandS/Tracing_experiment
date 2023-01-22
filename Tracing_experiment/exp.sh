@@ -2,10 +2,10 @@
 # start overhead
 git pull
 echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
-increment=450
-threads=30
-depth=35
-iterations=3
+increment=15
+threads=250
+depth=40
+iterations=5
 # define experiment
 experiment() {
   # setup
@@ -50,6 +50,8 @@ for _ in {1..3}; do # number of iterations
   experiment "$1" C # rcu
   experiment "$1" D # blank
   experiment "$1" E # rcu + enter sleep
+  experiment "$1" F
+  experiment "$1" G
 done
 python3 process.py "$1" $iterations $increment $threads $depth "$2" # run number, iterations, time, threads, depth, governor
 git add .
