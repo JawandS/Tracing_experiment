@@ -38,9 +38,9 @@ experiment() {
 iterationCounter=0
 for _ in {1..3}; do # number of iterations
   # warmup phase
-  end=$((SECONDS + 15))
+  end=$((SECONDS + 5))
   while [ $SECONDS -lt $end ]; do # run 15 seconds of warmup
-    python3 job.py "warmup" 9 10 # run job
+    python3 job.py "warmup" 20 20 # run job
   done
   # experiment phase
   iterationCounter=$((iterationCounter + 1)) && printf "\t---------Run %s---------\n" "$iterationCounter"
