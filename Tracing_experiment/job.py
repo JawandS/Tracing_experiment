@@ -1,5 +1,6 @@
 import sys
 import time
+import random
 from _thread import start_new_thread
 
 
@@ -10,10 +11,15 @@ def fib(n):
     return fib(n - 1) + fib(n - 2)
 
 
-# multiple fibonacci threads
+def sqrrt(n):
+    for _ in range(n):
+        x = random.random()
+        y = x ** 0.5
+
+# multiple threads
 def server_workload(T, n):
     for _ in range(T):
-        start_new_thread(fib, (n,))
+        start_new_thread(sqrrt, (n,))
 
 
 # Driver Program
