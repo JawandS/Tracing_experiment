@@ -2,10 +2,10 @@
 # start overhead
 git pull
 echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
-increment=15
+increment=60
 threads=300
 depth=1000
-iterations=10
+iterations=50
 # define experiment
 experiment() {
   # setup
@@ -36,7 +36,7 @@ experiment() {
 }
 # run experiment
 iterationCounter=0
-for _ in {1..10}; do # number of iterations
+for _ in {1..50}; do # number of iterations
   # warmup phase
   end=$((SECONDS + 5))
   while [ $SECONDS -lt $end ]; do # run 15 seconds of warmup
