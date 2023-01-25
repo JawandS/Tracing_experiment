@@ -1,5 +1,8 @@
 import sys
 
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
 
 def read_file(file):
     # add file lines to list
@@ -33,12 +36,28 @@ def get_data(lines):
     return relJobs, relEvents, allJobs, allEvents
 
 
+def linReg(allEvents, allJobs):
+    # get the data
+    x = allEvents  # number of events
+    y = allJobs  # number of jobs
+    # reshape the arrays to make them 2-dimensional
+    x = x.reshape(-1, 1)
+    y = y.reshape(-1, 1)
+    # get the regression
+    reg = LinearRegression()
+    reg.fit(x, y)
+    # return the results
+    return f"jobs = {reg.coef_[0][0]} * events + {reg.intercept_[0]}"
+
+
 def main(args):
     run = args[1]
     # read file
     lines = read_file("Logs/log_" + run + ".txt")
     # process data
     relJobs, relEvents, allJobs, allEvents = get_data(lines)
+    # get the regression
+    regression = linReg(np.array(allEvents), np.array(allJobs))
     # write results to file
     with open("Results/result_" + run + ".txt", 'w') as f:
         f.write(f"iterations {args[2]} | time {args[3]} | threads {args[4]} | depth {args[5]} | governor {args[6]}\n")
@@ -50,6 +69,8 @@ def main(args):
         f.write(f"{allJobs}\n")
         f.write("Total amounts of events\n")
         f.write(f"{allEvents}\n")
+        f.write("Regression\n")
+        f.write(f"{regression}\n")
 
 
 if __name__ == "__main__":
@@ -60,7 +81,8 @@ if __name__ == "__main__":
         main(args)
     else:
         # runs = ["2", "3", "4", "5", "C1", "C2"]
-        runs = ["3", "4", "5", "6", "7"]
+        runs = ["11"]
         for run in runs:
             args = ["", run, 20, "20s", 15, 27, "powersave"]
+            # args = []
             main(args)

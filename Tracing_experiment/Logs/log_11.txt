@@ -1,0 +1,800 @@
+863
+0 raw.txt
+758
+24189380 raw.txt
+781
+65433210 raw.txt
+797
+65345977 raw.txt
+850
+2 raw.txt
+783
+78228054 raw.txt
+765
+77697065 raw.txt
+768
+77282373 raw.txt
+864
+0 raw.txt
+757
+24943925 raw.txt
+782
+65349273 raw.txt
+794
+65024998 raw.txt
+851
+2 raw.txt
+779
+78426831 raw.txt
+764
+77575853 raw.txt
+762
+77141947 raw.txt
+861
+0 raw.txt
+755
+24758023 raw.txt
+779
+65073604 raw.txt
+798
+65060436 raw.txt
+852
+2 raw.txt
+775
+78321933 raw.txt
+766
+77839092 raw.txt
+759
+76191321 raw.txt
+859
+0 raw.txt
+758
+24648239 raw.txt
+783
+65170644 raw.txt
+797
+65175558 raw.txt
+849
+2 raw.txt
+777
+78463672 raw.txt
+760
+77293989 raw.txt
+763
+76603582 raw.txt
+862
+0 raw.txt
+756
+24731575 raw.txt
+780
+64531878 raw.txt
+795
+65117954 raw.txt
+854
+2 raw.txt
+778
+78633435 raw.txt
+767
+77736680 raw.txt
+761
+76307743 raw.txt
+861
+0 raw.txt
+756
+24418656 raw.txt
+773
+62005595 raw.txt
+787
+63074908 raw.txt
+853
+2 raw.txt
+771
+77625465 raw.txt
+764
+77571932 raw.txt
+765
+76880339 raw.txt
+858
+0 raw.txt
+759
+24734778 raw.txt
+788
+65430089 raw.txt
+802
+65268199 raw.txt
+851
+2 raw.txt
+784
+76290570 raw.txt
+768
+77596506 raw.txt
+768
+77000017 raw.txt
+859
+0 raw.txt
+758
+24555124 raw.txt
+776
+64596668 raw.txt
+799
+65266637 raw.txt
+852
+2 raw.txt
+771
+77626751 raw.txt
+763
+77383033 raw.txt
+760
+76630821 raw.txt
+863
+0 raw.txt
+760
+25020511 raw.txt
+779
+64772650 raw.txt
+802
+65304953 raw.txt
+852
+2 raw.txt
+778
+77849851 raw.txt
+764
+77370570 raw.txt
+761
+76882815 raw.txt
+863
+0 raw.txt
+754
+24300064 raw.txt
+784
+64910185 raw.txt
+784
+62422493 raw.txt
+851
+2 raw.txt
+775
+77938267 raw.txt
+770
+77711077 raw.txt
+760
+76280973 raw.txt
+863
+0 raw.txt
+757
+25112534 raw.txt
+782
+65241368 raw.txt
+799
+65310394 raw.txt
+854
+2 raw.txt
+775
+77895101 raw.txt
+767
+78010273 raw.txt
+767
+76891902 raw.txt
+856
+0 raw.txt
+756
+24936281 raw.txt
+775
+62914366 raw.txt
+798
+65038770 raw.txt
+855
+2 raw.txt
+777
+78126679 raw.txt
+769
+77846048 raw.txt
+762
+76730378 raw.txt
+860
+0 raw.txt
+758
+24735716 raw.txt
+781
+64890774 raw.txt
+795
+64892442 raw.txt
+852
+2 raw.txt
+773
+77559963 raw.txt
+767
+78017542 raw.txt
+764
+77059682 raw.txt
+860
+0 raw.txt
+762
+24870066 raw.txt
+775
+64831417 raw.txt
+795
+65198559 raw.txt
+851
+2 raw.txt
+777
+77750443 raw.txt
+762
+77297662 raw.txt
+766
+77092118 raw.txt
+861
+0 raw.txt
+760
+25068874 raw.txt
+780
+64902691 raw.txt
+787
+64102990 raw.txt
+853
+2 raw.txt
+774
+75620298 raw.txt
+765
+77345602 raw.txt
+762
+77239777 raw.txt
+861
+0 raw.txt
+756
+24631349 raw.txt
+782
+64743187 raw.txt
+793
+64867915 raw.txt
+853
+2 raw.txt
+777
+78017355 raw.txt
+776
+78469670 raw.txt
+767
+77698829 raw.txt
+861
+0 raw.txt
+758
+24856245 raw.txt
+777
+64743629 raw.txt
+794
+64993645 raw.txt
+851
+2 raw.txt
+775
+78087654 raw.txt
+762
+77496698 raw.txt
+764
+77016709 raw.txt
+860
+0 raw.txt
+758
+24575044 raw.txt
+782
+64389323 raw.txt
+796
+65017812 raw.txt
+854
+2 raw.txt
+779
+78487076 raw.txt
+770
+78230633 raw.txt
+759
+76702558 raw.txt
+858
+0 raw.txt
+762
+24903210 raw.txt
+782
+64933599 raw.txt
+784
+62400371 raw.txt
+853
+2 raw.txt
+770
+78038736 raw.txt
+766
+76850212 raw.txt
+763
+74703540 raw.txt
+861
+0 raw.txt
+757
+24742401 raw.txt
+778
+64900170 raw.txt
+797
+65367454 raw.txt
+855
+2 raw.txt
+773
+77745357 raw.txt
+769
+78129309 raw.txt
+760
+76893114 raw.txt
+862
+0 raw.txt
+757
+24991372 raw.txt
+786
+65324147 raw.txt
+797
+64590683 raw.txt
+853
+2 raw.txt
+774
+77952401 raw.txt
+763
+77032121 raw.txt
+759
+76685146 raw.txt
+862
+0 raw.txt
+755
+24617396 raw.txt
+785
+65351867 raw.txt
+798
+65627312 raw.txt
+854
+2 raw.txt
+777
+78387629 raw.txt
+767
+77854834 raw.txt
+756
+76070737 raw.txt
+861
+0 raw.txt
+758
+24966183 raw.txt
+778
+65081641 raw.txt
+798
+65269153 raw.txt
+853
+2 raw.txt
+779
+78483266 raw.txt
+761
+76752620 raw.txt
+762
+76853801 raw.txt
+859
+0 raw.txt
+754
+24861629 raw.txt
+781
+64835136 raw.txt
+796
+65194012 raw.txt
+851
+2 raw.txt
+781
+78861016 raw.txt
+770
+78434257 raw.txt
+760
+76442913 raw.txt
+860
+0 raw.txt
+762
+24925722 raw.txt
+782
+64921790 raw.txt
+781
+62649760 raw.txt
+849
+2 raw.txt
+774
+77846282 raw.txt
+765
+77875404 raw.txt
+759
+75630775 raw.txt
+861
+0 raw.txt
+751
+24929712 raw.txt
+783
+64752094 raw.txt
+797
+65533785 raw.txt
+853
+2 raw.txt
+776
+78479265 raw.txt
+762
+77320029 raw.txt
+765
+76923261 raw.txt
+862
+0 raw.txt
+756
+24931300 raw.txt
+773
+64678793 raw.txt
+792
+64786592 raw.txt
+853
+2 raw.txt
+772
+77807263 raw.txt
+763
+77632478 raw.txt
+759
+76455726 raw.txt
+860
+0 raw.txt
+757
+24856058 raw.txt
+774
+63236088 raw.txt
+797
+65181755 raw.txt
+851
+2 raw.txt
+774
+78214328 raw.txt
+762
+77373480 raw.txt
+764
+74579569 raw.txt
+863
+0 raw.txt
+759
+24579397 raw.txt
+773
+63266124 raw.txt
+802
+65570487 raw.txt
+853
+2 raw.txt
+781
+78385379 raw.txt
+767
+77863300 raw.txt
+757
+76557305 raw.txt
+862
+0 raw.txt
+758
+24987045 raw.txt
+777
+64395517 raw.txt
+795
+65524836 raw.txt
+850
+2 raw.txt
+781
+78843578 raw.txt
+770
+77796390 raw.txt
+763
+76887652 raw.txt
+858
+0 raw.txt
+758
+24828483 raw.txt
+785
+65326186 raw.txt
+801
+65003062 raw.txt
+853
+2 raw.txt
+780
+77683901 raw.txt
+770
+78083266 raw.txt
+762
+76860111 raw.txt
+858
+0 raw.txt
+758
+24951158 raw.txt
+780
+65287122 raw.txt
+799
+65073871 raw.txt
+851
+2 raw.txt
+777
+78344106 raw.txt
+765
+77301110 raw.txt
+765
+76771672 raw.txt
+861
+0 raw.txt
+756
+24807454 raw.txt
+787
+65417765 raw.txt
+796
+65264919 raw.txt
+851
+2 raw.txt
+776
+77956011 raw.txt
+768
+77931125 raw.txt
+766
+77252887 raw.txt
+862
+0 raw.txt
+759
+24835976 raw.txt
+780
+64944431 raw.txt
+793
+65071929 raw.txt
+854
+2 raw.txt
+780
+78419554 raw.txt
+770
+78352498 raw.txt
+768
+77151290 raw.txt
+861
+0 raw.txt
+758
+24806481 raw.txt
+785
+65028744 raw.txt
+792
+64514141 raw.txt
+853
+2 raw.txt
+777
+78365968 raw.txt
+768
+78080447 raw.txt
+764
+74431255 raw.txt
+859
+0 raw.txt
+759
+24360427 raw.txt
+778
+64927718 raw.txt
+798
+65472252 raw.txt
+850
+2 raw.txt
+783
+78639285 raw.txt
+767
+77783884 raw.txt
+765
+76708111 raw.txt
+859
+0 raw.txt
+752
+24898225 raw.txt
+783
+64878419 raw.txt
+798
+65374561 raw.txt
+851
+2 raw.txt
+782
+78674557 raw.txt
+766
+77754724 raw.txt
+763
+77176963 raw.txt
+862
+0 raw.txt
+754
+24462850 raw.txt
+780
+65216163 raw.txt
+800
+65614643 raw.txt
+855
+2 raw.txt
+771
+77950688 raw.txt
+764
+77856246 raw.txt
+771
+77380755 raw.txt
+862
+0 raw.txt
+760
+24503710 raw.txt
+786
+65117749 raw.txt
+798
+65197879 raw.txt
+852
+2 raw.txt
+777
+78239448 raw.txt
+759
+77283885 raw.txt
+764
+76978470 raw.txt
+860
+0 raw.txt
+757
+24988690 raw.txt
+779
+64682027 raw.txt
+792
+64360447 raw.txt
+854
+2 raw.txt
+771
+77721296 raw.txt
+762
+75230863 raw.txt
+760
+76314708 raw.txt
+862
+0 raw.txt
+755
+24823557 raw.txt
+778
+65044206 raw.txt
+797
+65278345 raw.txt
+849
+2 raw.txt
+774
+77882115 raw.txt
+765
+77708058 raw.txt
+756
+76507581 raw.txt
+859
+0 raw.txt
+757
+24865402 raw.txt
+783
+65229128 raw.txt
+802
+65513593 raw.txt
+852
+2 raw.txt
+774
+78031005 raw.txt
+764
+75555261 raw.txt
+764
+77057239 raw.txt
+860
+0 raw.txt
+756
+24447595 raw.txt
+780
+64924995 raw.txt
+800
+65725493 raw.txt
+853
+2 raw.txt
+778
+78231538 raw.txt
+762
+77239434 raw.txt
+766
+76710835 raw.txt
+860
+0 raw.txt
+754
+24912029 raw.txt
+775
+63943864 raw.txt
+795
+64705634 raw.txt
+851
+2 raw.txt
+780
+78633317 raw.txt
+763
+77518340 raw.txt
+762
+76837807 raw.txt
+861
+0 raw.txt
+758
+24864414 raw.txt
+778
+64956698 raw.txt
+795
+64452528 raw.txt
+851
+2 raw.txt
+769
+77586399 raw.txt
+767
+77873182 raw.txt
+758
+76413508 raw.txt
+860
+0 raw.txt
+760
+24754380 raw.txt
+781
+64891010 raw.txt
+793
+65131327 raw.txt
+850
+2 raw.txt
+777
+78366417 raw.txt
+765
+77813368 raw.txt
+768
+77321377 raw.txt
+862
+0 raw.txt
+758
+25290160 raw.txt
+779
+64603585 raw.txt
+803
+65084564 raw.txt
+854
+2 raw.txt
+777
+78128624 raw.txt
+763
+77423042 raw.txt
+763
+76530969 raw.txt
+859
+0 raw.txt
+758
+24645555 raw.txt
+784
+65258654 raw.txt
+805
+65361231 raw.txt
+852
+2 raw.txt
+775
+78043855 raw.txt
+764
+77690893 raw.txt
+762
+76632882 raw.txt
+860
+0 raw.txt
+755
+24673135 raw.txt
+777
+64346191 raw.txt
+800
+65378566 raw.txt
+854
+2 raw.txt
+772
+78207886 raw.txt
+759
+76615600 raw.txt
+764
+77087657 raw.txt
+859
+0 raw.txt
+757
+24929530 raw.txt
+781
+64660476 raw.txt
+804
+65176471 raw.txt
+853
+2 raw.txt
+776
+78381742 raw.txt
+757
+76964507 raw.txt
+766
+77430083 raw.txt
