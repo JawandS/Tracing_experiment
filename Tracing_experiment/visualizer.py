@@ -46,6 +46,7 @@ def versionTwo(run_num):
         sns.despine(fig)
         fig.savefig(f"Figures/Powersave/figure_{run_num}.png")
 
+
 def versionThree(run_num):
     # add bar plots of relative jobs/events for powersave mode
     with open(f"Results/result_{run_num}.txt") as file:
@@ -63,13 +64,41 @@ def versionThree(run_num):
         fig.savefig(f"Figures/Powersave/figure_abs_{run_num}.png")
 
 
+def linePlot(run_num):
+    # line plot of the events compared to jobs and probes
+    with open(f"Results/result_{run_num}.txt") as file:
+        #  get data
+        lines = [line.rstrip() for line in file]
+        totalJobs = eval(lines[6])
+        totalEvents = eval(lines[8])
+        numProbes = [0, 1, 2, 1, 1, 3, 6, 10]
+        df = pd.DataFrame({
+            'Probe Type': ["X", "A", "B", "C", "D", "E", "F", "G"],
+            'Probes': numProbes,
+            'Total Events': totalEvents,
+            'Total Jobs': totalJobs,
+        })
+        # plot a scatter plot with regression
+        fig, ax1 = plt.subplots(figsize=(10, 10))
+        sns.regplot(x='Total Events', y='Total Jobs', data=df, ax=ax1)
+        sns.despine(fig)
+        fig.savefig(f"Figures/events_to_jobs_{run_num}.png")
+        # close the plot
+        plt.close()
+        # plot probes to jobs
+        fig, ax1 = plt.subplots(figsize=(10, 10))
+        sns.regplot(x='Probes', y='Total Jobs', data=df, ax=ax1)
+        sns.despine(fig)
+        fig.savefig(f"Figures/probes_to_jobs_{run_num}.png")
+
+
 if __name__ == "__main__":
     args = sys.argv
     if len(args) > 1:
         run_num = args[1]
-        versionOne(run_num)
+        versionThree(run_num)
     else:
         # run_nums = ["2", "3", "4", "5", "C1", "C2"]
-        run_nums = [4, 5, 6, 7, 8]
+        run_nums = [12]
         for run_num in run_nums:
-            versionThree(run_num)
+            linePlot(run_num)

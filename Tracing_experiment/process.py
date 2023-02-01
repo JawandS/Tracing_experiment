@@ -36,7 +36,7 @@ def get_data(lines):
     return relJobs, relEvents, allJobs, allEvents
 
 
-def linReg(allEvents, allJobs):
+def linReg(allEvents, allJobs, type):
     # get the data
     x = allEvents  # number of events
     y = allJobs  # number of jobs
@@ -47,7 +47,7 @@ def linReg(allEvents, allJobs):
     reg = LinearRegression()
     reg.fit(x, y)
     # return the results
-    return f"jobs = {reg.coef_[0][0]} * events + {reg.intercept_[0]}"
+    return f"jobs = {reg.coef_[0][0]} * {type} + {reg.intercept_[0]}", f"error = {reg.score(x, y)}"
 
 
 def main(args):
@@ -57,7 +57,8 @@ def main(args):
     # process data
     relJobs, relEvents, allJobs, allEvents = get_data(lines)
     # get the regression
-    regression = linReg(np.array(allEvents), np.array(allJobs))
+    regA, errA = linReg(np.array(allEvents), np.array(allJobs), "events")
+    regB, errB = linReg(np.array([0, 1, 2, 1, 1, 3, 6, 10]), np.array(allJobs), "jobs")
     # write results to file
     with open("Results/result_" + run + ".txt", 'w') as f:
         f.write(f"iterations {args[2]} | time {args[3]} | threads {args[4]} | depth {args[5]} | governor {args[6]}\n")
@@ -69,8 +70,13 @@ def main(args):
         f.write(f"{allJobs}\n")
         f.write("Total amounts of events\n")
         f.write(f"{allEvents}\n")
-        f.write("Regression\n")
-        f.write(f"{regression}\n")
+        f.write("Events to Jobs\n")
+        f.write(f"{regA}\n")
+        f.write(f"{errA}\n")
+        f.write("Probes to Jobs\n")
+        f.write(f"{regB}\n")
+        f.write(f"{errB}\n")
+
 
 
 if __name__ == "__main__":

@@ -3,8 +3,8 @@
 git pull
 echo "$2" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor # powersave or performance
 increment=20 # 20 seconds
-threads=300
-depth=1000
+threads=500
+depth=1500
 iterations=10
 # define experiment
 experiment() {
@@ -54,6 +54,7 @@ for _ in {1..10}; do # number of iterations
   experiment "$1" G # 10 probes
 done
 python3 process.py "$1" $iterations $increment $threads $depth "$2" # run number, iterations, time, threads, depth, governor
+python3 visualizer.py "$1" # run number
 git add .
 git commit -m "add and process overhead experiment $1"
 git push # add to git
