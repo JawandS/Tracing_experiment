@@ -82,14 +82,14 @@ def linePlot(run_num):
         fig, ax1 = plt.subplots(figsize=(10, 10))
         sns.regplot(x='Total Events', y='Total Jobs', data=df, ax=ax1)
         sns.despine(fig)
-        fig.savefig(f"Figures/events_to_jobs_{run_num}.png")
+        fig.savefig(f"Figures/{run_num}_events.png")
         # close the plot
         plt.close()
         # plot probes to jobs
         fig, ax1 = plt.subplots(figsize=(10, 10))
         sns.regplot(x='Probes', y='Total Jobs', data=df, ax=ax1)
         sns.despine(fig)
-        fig.savefig(f"Figures/probes_to_jobs_{run_num}.png")
+        fig.savefig(f"Figures/{run_num}_probes.png")
 
 
 if __name__ == "__main__":
@@ -99,6 +99,6 @@ if __name__ == "__main__":
         versionThree(run_num)
     else:
         # run_nums = ["2", "3", "4", "5", "C1", "C2"]
-        run_nums = [12]
+        run_nums = ["home_1_ps", "home_2_per"]
         for run_num in run_nums:
             linePlot(run_num)

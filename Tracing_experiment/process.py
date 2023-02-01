@@ -87,7 +87,7 @@ if __name__ == "__main__":
         main(args)
     else:
         # runs = ["2", "3", "4", "5", "C1", "C2"]
-        runs = ["home_1_ps"]
+        runs = ["home_2_per"]
         for run in runs:
             args = ["", run, 10, "20", 500, 1500, "powersave"]
             # args = []
