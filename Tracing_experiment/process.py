@@ -58,7 +58,7 @@ def main(args):
     relJobs, relEvents, allJobs, allEvents = get_data(lines)
     # get the regression
     regA, errA = linReg(np.array(allEvents), np.array(allJobs), "events")
-    regB, errB = linReg(np.array([0, 1, 2, 1, 1, 3, 6, 10]), np.array(allJobs), "jobs")
+    regB, errB = linReg(np.array([0, 1, 2, 1, 1, 3, 6, 10]), np.array(allJobs), "probes")
     # write results to file
     with open("Results/result_" + run + ".txt", 'w') as f:
         f.write(f"iterations {args[2]} | time {args[3]} | threads {args[4]} | depth {args[5]} | governor {args[6]}\n")

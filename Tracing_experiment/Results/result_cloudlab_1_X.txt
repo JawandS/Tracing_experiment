@@ -11,5 +11,5 @@ Events to Jobs
 jobs = -1.3915621025539043e-08 * events + 1338.1763052791125
 error = 0.00487442605427113
 Probes to Jobs
-jobs = -2.85 * jobs + 1345.175
+jobs = -2.85 * probes + 1345.175
 error = 0.4252965720363229

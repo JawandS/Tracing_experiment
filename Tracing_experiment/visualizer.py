@@ -96,9 +96,9 @@ if __name__ == "__main__":
     args = sys.argv
     if len(args) > 1:
         run_num = args[1]
-        versionThree(run_num)
+        linePlot(run_num)
     else:
-        # run_nums = ["2", "3", "4", "5", "C1", "C2"]
-        run_nums = ["home_1_ps", "home_2_per"]
+        # run_nums = ["home_1_ps", "home_2_per"]
+        run_nums = ["cloudlab_1_X"]
         for run_num in run_nums:
             linePlot(run_num)
