@@ -1,0 +1,15 @@
+iterations 10 | time 20 | threads 500 | depth 1500 | governor powersave
+Relative amounts of jobs
+[13.85953, 9.6678, 12.65106, 12.75219, 13.73818, 12.646, 12.38307, 12.30217]
+Relative amounts of events
+[0.0, 6.44641, 16.82724, 16.68664, 0.0, 20.13741, 20.11152, 19.79078]
+Total amounts of jobs
+[2741.0, 1912.0, 2502.0, 2522.0, 2717.0, 2501.0, 2449.0, 2433.0]
+Total amounts of events
+[0.0, 83606964.0, 218241461.0, 216417883.0, 20.0, 261172875.0, 260836976.0, 256677172.0]
+Events to Jobs
+jobs = -4.077075479394485e-07 * events + 2538.2222088160074
+error = 0.0342999577103098
+Probes to Jobs
+jobs = -8.1125 * probes + 2496.4625
+error = 0.011641126909263555
