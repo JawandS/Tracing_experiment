@@ -1,0 +1,160 @@
+133
+0 raw.txt
+132
+8183703 raw.txt
+134
+15457977 raw.txt
+133
+15208945 raw.txt
+132
+2 raw.txt
+136
+17150480 raw.txt
+130
+16621056 raw.txt
+135
+16643788 raw.txt
+139
+0 raw.txt
+132
+8576904 raw.txt
+139
+15575078 raw.txt
+136
+15446364 raw.txt
+136
+2 raw.txt
+132
+16970169 raw.txt
+135
+16760771 raw.txt
+132
+16529470 raw.txt
+138
+0 raw.txt
+132
+8237928 raw.txt
+135
+15332156 raw.txt
+132
+15202586 raw.txt
+132
+2 raw.txt
+133
+16732938 raw.txt
+133
+16787290 raw.txt
+129
+16577695 raw.txt
+137
+0 raw.txt
+134
+8375683 raw.txt
+136
+15163166 raw.txt
+135
+15201519 raw.txt
+132
+2 raw.txt
+133
+17359414 raw.txt
+135
+16829780 raw.txt
+131
+16586699 raw.txt
+135
+0 raw.txt
+134
+8603381 raw.txt
+136
+15322723 raw.txt
+139
+15524937 raw.txt
+134
+2 raw.txt
+137
+16605479 raw.txt
+133
+16648943 raw.txt
+134
+16595701 raw.txt
+137
+0 raw.txt
+131
+8279143 raw.txt
+134
+15292779 raw.txt
+130
+15124024 raw.txt
+138
+2 raw.txt
+138
+16921415 raw.txt
+133
+16776024 raw.txt
+135
+16304859 raw.txt
+133
+0 raw.txt
+133
+8381162 raw.txt
+136
+15370700 raw.txt
+135
+15461676 raw.txt
+135
+2 raw.txt
+132
+17005343 raw.txt
+132
+17023784 raw.txt
+134
+16296136 raw.txt
+136
+0 raw.txt
+130
+8284835 raw.txt
+134
+15435236 raw.txt
+135
+15088806 raw.txt
+134
+2 raw.txt
+134
+16770152 raw.txt
+132
+16685134 raw.txt
+133
+16512370 raw.txt
+137
+0 raw.txt
+130
+8213895 raw.txt
+134
+15560068 raw.txt
+128
+15520259 raw.txt
+133
+2 raw.txt
+135
+17107737 raw.txt
+131
+16503227 raw.txt
+131
+16608118 raw.txt
+135
+0 raw.txt
+132
+8197600 raw.txt
+132
+15178018 raw.txt
+134
+15298663 raw.txt
+135
+2 raw.txt
+133
+16853102 raw.txt
+139
+16673152 raw.txt
+135
+16757976 raw.txt
